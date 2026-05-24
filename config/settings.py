@@ -12,8 +12,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "change-me")
 DEBUG = os.getenv("DJANGO_DEBUG", "False").lower() == "true"
-ALLOWED_HOSTS = [host.strip() for host in os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")]
+
+# DJANGO_ALLOWED_HOSTS puede omitirse en Railway: el dominio se detecta solo
+_extra_hosts = [os.getenv("RAILWAY_PUBLIC_DOMAIN", "").strip()]
+ALLOWED_HOSTS = (
+    [host.strip() for host in os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")]
+    + [h for h in _extra_hosts if h]
+)
+
 CORS_ALLOWED_ORIGINS = [origin.strip() for origin in os.getenv("CORS_ALLOWED_ORIGINS", "").split(",") if origin.strip()]
+# Durante el primer deploy en Railway el frontend aún no existe; permite todo temporalmente
+CORS_ALLOW_ALL_ORIGINS = os.getenv("CORS_ALLOW_ALL_ORIGINS", "False").lower() == "true"
 
 # Railway sirve todo vía HTTPS — le decimos a Django que confíe en el proxy
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
