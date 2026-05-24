@@ -1,0 +1,4802 @@
+[
+{
+  "model": "accounts.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$qvdXmH2w1N63LJgFLNNqIu$t0SIdAsg6XMITs+lJh14437MbzZ0iHX3/v08pc60GrI=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "Admin",
+    "last_name": "Checkar",
+    "email": "admin@checkar.co",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-05-10T22:52:46.473Z",
+    "role": "admin",
+    "phone": "",
+    "document_number": "",
+    "email_verified": false,
+    "mobile_notifications_enabled": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$QDoZv2imiDwumULQwrbzXb$aYSlwbPqFtVa4/7jd4sN6aFZ9IWXRzXQ/4B1L/Ou3P0=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "cliente1",
+    "first_name": "Carlos",
+    "last_name": "Perez",
+    "email": "cliente1@checkar.co",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-10T23:40:29.940Z",
+    "role": "customer",
+    "phone": "3001234567",
+    "document_number": "12345678",
+    "email_verified": false,
+    "mobile_notifications_enabled": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$jn91PzXyz3PPeFJPdKdgrb$lDaNzjL5r0liiIhtqhrHGGb7vTRMazQNynSWGDzsbJI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "operador1",
+    "first_name": "Juan",
+    "last_name": "González",
+    "email": "operador@checkar.co",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-10T23:41:03.164Z",
+    "role": "operator",
+    "phone": "",
+    "document_number": "",
+    "email_verified": false,
+    "mobile_notifications_enabled": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$y8mOnOPDE5uY1zRKPA5oVC$q5+us6SlqiNBqIMt1RImhqrfCrGgwe2U0iTzWz8l26I=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "inspector1",
+    "first_name": "María",
+    "last_name": "Ruiz",
+    "email": "inspector@checkar.co",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-10T23:41:03.833Z",
+    "role": "inspector",
+    "phone": "",
+    "document_number": "",
+    "email_verified": false,
+    "mobile_notifications_enabled": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$cAAQGAkzlDTbOIVeMZolO0$XCQw3NH6l1TrzL0K0THq7diBEHWRDJmVL2NDMQKOICg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "1234567890",
+    "first_name": "Juan",
+    "last_name": "Perez",
+    "email": "juan@test.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-14T21:44:32.666Z",
+    "role": "customer",
+    "phone": "3001234567",
+    "document_number": "1234567890",
+    "email_verified": false,
+    "mobile_notifications_enabled": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$CTPwh4Zngu0Ea0F6WWfheN$GAnU9ibljLY420Me98UXTfoGJh9fjO1+VnSI0Z9i+5s=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "supervisor1",
+    "first_name": "Laura",
+    "last_name": "Mendez",
+    "email": "laura.mendez@checkar.co",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-17T10:33:02.465Z",
+    "role": "supervisor",
+    "phone": "3152345678",
+    "document_number": "88776655",
+    "email_verified": false,
+    "mobile_notifications_enabled": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$P0qSWcQkyXzYa1Eq5dfnD6$6m2cXdkAT5NLwNa4Y5BLit5yuOXyWtmo49tOvdxCoDw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "1083044231",
+    "first_name": "Andres",
+    "last_name": "Perez",
+    "email": "andres@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-17T18:14:00.412Z",
+    "role": "customer",
+    "phone": "310932322",
+    "document_number": "1083044231",
+    "email_verified": false,
+    "mobile_notifications_enabled": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$RCxjfssEU3t5Kmb7AgqDXD$/0MR/Q9iU/numM58m6qKqg2Fhuub+tF1EkQGFpbQ9YE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "1212112",
+    "first_name": "XXX",
+    "last_name": "XXX",
+    "email": "afperezpena@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-17T19:06:46.399Z",
+    "role": "customer",
+    "phone": "311213122",
+    "document_number": "1212112",
+    "email_verified": false,
+    "mobile_notifications_enabled": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$eY1N0PDqd0A2WboXqE4Oi5$LFMRSqQHbDF8tYlmVZgmvH0L9v6EpIHE5PxKyug6a3E=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "103912921",
+    "first_name": "Nicolas",
+    "last_name": "Fernandez",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-17T19:43:34.878Z",
+    "role": "customer",
+    "phone": "302912222",
+    "document_number": "103912921",
+    "email_verified": false,
+    "mobile_notifications_enabled": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 10,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$l7dTXHqJ5RLNpONpqxZ0DK$c+ZQ17C1/X0yZdXU7J/PoipEb267qaJpHTt7v6OiibY=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "19228722",
+    "first_name": "Eyeris Antonioa",
+    "last_name": "Perez Lopez",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-17T20:12:28.057Z",
+    "role": "customer",
+    "phone": "315287871",
+    "document_number": "19228722",
+    "email_verified": false,
+    "mobile_notifications_enabled": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.customerprofile",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-05-10T23:40:30.489Z",
+    "updated_at": "2026-05-10T23:40:30.489Z",
+    "user": 2,
+    "address": "",
+    "city": "",
+    "preferred_branch": null
+  }
+},
+{
+  "model": "accounts.customerprofile",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-05-14T21:44:33.234Z",
+    "updated_at": "2026-05-14T21:44:33.234Z",
+    "user": 5,
+    "address": "",
+    "city": "",
+    "preferred_branch": null
+  }
+},
+{
+  "model": "accounts.customerprofile",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-05-17T18:14:01.390Z",
+    "updated_at": "2026-05-17T18:14:01.390Z",
+    "user": 7,
+    "address": "",
+    "city": "",
+    "preferred_branch": null
+  }
+},
+{
+  "model": "accounts.customerprofile",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-05-17T19:06:46.963Z",
+    "updated_at": "2026-05-17T19:06:46.963Z",
+    "user": 8,
+    "address": "",
+    "city": "",
+    "preferred_branch": null
+  }
+},
+{
+  "model": "accounts.customerprofile",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-05-17T19:43:35.441Z",
+    "updated_at": "2026-05-17T19:43:35.441Z",
+    "user": 9,
+    "address": "",
+    "city": "",
+    "preferred_branch": null
+  }
+},
+{
+  "model": "accounts.customerprofile",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-05-17T20:12:29.011Z",
+    "updated_at": "2026-05-17T20:12:29.011Z",
+    "user": 10,
+    "address": "",
+    "city": "",
+    "preferred_branch": null
+  }
+},
+{
+  "model": "accounts.operatorprofile",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-05-17T10:33:03.061Z",
+    "updated_at": "2026-05-17T10:33:03.061Z",
+    "user": 6,
+    "employee_code": "SUP-001",
+    "branch": 1,
+    "can_validate_documents": true,
+    "can_release_certificate": true
+  }
+},
+{
+  "model": "accounts.operatorprofile",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-05-17T10:33:03.072Z",
+    "updated_at": "2026-05-17T10:33:03.072Z",
+    "user": 3,
+    "employee_code": "EMP-OPERA",
+    "branch": 1,
+    "can_validate_documents": false,
+    "can_release_certificate": false
+  }
+},
+{
+  "model": "accounts.operatorprofile",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-05-17T10:33:03.076Z",
+    "updated_at": "2026-05-17T10:33:03.076Z",
+    "user": 4,
+    "employee_code": "EMP-INSPE",
+    "branch": 1,
+    "can_validate_documents": false,
+    "can_release_certificate": false
+  }
+},
+{
+  "model": "accounts.auditlog",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-05-10T22:53:11.596Z",
+    "updated_at": "2026-05-10T22:53:11.596Z",
+    "actor": 1,
+    "action": "login",
+    "entity_type": "user",
+    "entity_id": "1",
+    "metadata": {
+      "role": "admin"
+    },
+    "ip_address": "127.0.0.1"
+  }
+},
+{
+  "model": "accounts.auditlog",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-05-10T23:25:54.130Z",
+    "updated_at": "2026-05-10T23:25:54.130Z",
+    "actor": 1,
+    "action": "login",
+    "entity_type": "user",
+    "entity_id": "1",
+    "metadata": {
+      "role": "admin"
+    },
+    "ip_address": "127.0.0.1"
+  }
+},
+{
+  "model": "accounts.auditlog",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-05-10T23:40:30.495Z",
+    "updated_at": "2026-05-10T23:40:30.495Z",
+    "actor": 2,
+    "action": "register",
+    "entity_type": "user",
+    "entity_id": "2",
+    "metadata": {
+      "role": "customer"
+    },
+    "ip_address": "127.0.0.1"
+  }
+},
+{
+  "model": "accounts.auditlog",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-05-12T20:43:32.536Z",
+    "updated_at": "2026-05-12T20:43:32.536Z",
+    "actor": 1,
+    "action": "logout",
+    "entity_type": "user",
+    "entity_id": "1",
+    "metadata": {
+      "role": "admin"
+    },
+    "ip_address": "127.0.0.1"
+  }
+},
+{
+  "model": "accounts.auditlog",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-05-12T20:43:49.168Z",
+    "updated_at": "2026-05-12T20:43:49.168Z",
+    "actor": 2,
+    "action": "login",
+    "entity_type": "user",
+    "entity_id": "2",
+    "metadata": {
+      "role": "customer"
+    },
+    "ip_address": "127.0.0.1"
+  }
+},
+{
+  "model": "accounts.auditlog",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-05-12T20:44:34.829Z",
+    "updated_at": "2026-05-12T20:44:34.829Z",
+    "actor": 2,
+    "action": "logout",
+    "entity_type": "user",
+    "entity_id": "2",
+    "metadata": {
+      "role": "customer"
+    },
+    "ip_address": "127.0.0.1"
+  }
+},
+{
+  "model": "accounts.auditlog",
+  "pk": 7,
+  "fields": {
+    "created_at": "2026-05-12T20:44:59.687Z",
+    "updated_at": "2026-05-12T20:44:59.687Z",
+    "actor": 4,
+    "action": "login",
+    "entity_type": "user",
+    "entity_id": "4",
+    "metadata": {
+      "role": "inspector"
+    },
+    "ip_address": "127.0.0.1"
+  }
+},
+{
+  "model": "accounts.auditlog",
+  "pk": 8,
+  "fields": {
+    "created_at": "2026-05-12T20:45:05.053Z",
+    "updated_at": "2026-05-12T20:45:05.053Z",
+    "actor": 4,
+    "action": "logout",
+    "entity_type": "user",
+    "entity_id": "4",
+    "metadata": {
+      "role": "inspector"
+    },
+    "ip_address": "127.0.0.1"
+  }
+},
+{
+  "model": "accounts.auditlog",
+  "pk": 9,
+  "fields": {
+    "created_at": "2026-05-12T20:45:17.089Z",
+    "updated_at": "2026-05-12T20:45:17.089Z",
+    "actor": 3,
+    "action": "login",
+    "entity_type": "user",
+    "entity_id": "3",
+    "metadata": {
+      "role": "operator"
+    },
+    "ip_address": "127.0.0.1"
+  }
+},
+{
+  "model": "accounts.auditlog",
+  "pk": 10,
+  "fields": {
+    "created_at": "2026-05-14T21:44:33.249Z",
+    "updated_at": "2026-05-14T21:44:33.249Z",
+    "actor": 5,
+    "action": "public_registration",
+    "entity_type": "user",
+    "entity_id": "5",
+    "metadata": {
+      "role": "customer",
+      "source": "public_link"
+    },
+    "ip_address": "127.0.0.1"
+  }
+},
+{
+  "model": "accounts.auditlog",
+  "pk": 11,
+  "fields": {
+    "created_at": "2026-05-17T10:34:34.723Z",
+    "updated_at": "2026-05-17T10:34:34.723Z",
+    "actor": 2,
+    "action": "login",
+    "entity_type": "user",
+    "entity_id": "2",
+    "metadata": {
+      "role": "customer"
+    },
+    "ip_address": "127.0.0.1"
+  }
+},
+{
+  "model": "accounts.auditlog",
+  "pk": 12,
+  "fields": {
+    "created_at": "2026-05-17T10:47:01.682Z",
+    "updated_at": "2026-05-17T10:47:01.682Z",
+    "actor": 2,
+    "action": "logout",
+    "entity_type": "user",
+    "entity_id": "2",
+    "metadata": {
+      "role": "customer"
+    },
+    "ip_address": "127.0.0.1"
+  }
+},
+{
+  "model": "accounts.auditlog",
+  "pk": 13,
+  "fields": {
+    "created_at": "2026-05-17T10:47:45.283Z",
+    "updated_at": "2026-05-17T10:47:45.283Z",
+    "actor": 3,
+    "action": "login",
+    "entity_type": "user",
+    "entity_id": "3",
+    "metadata": {
+      "role": "operator"
+    },
+    "ip_address": "127.0.0.1"
+  }
+},
+{
+  "model": "accounts.auditlog",
+  "pk": 14,
+  "fields": {
+    "created_at": "2026-05-17T10:48:08.218Z",
+    "updated_at": "2026-05-17T10:48:08.218Z",
+    "actor": 3,
+    "action": "logout",
+    "entity_type": "user",
+    "entity_id": "3",
+    "metadata": {
+      "role": "operator"
+    },
+    "ip_address": "127.0.0.1"
+  }
+},
+{
+  "model": "accounts.auditlog",
+  "pk": 15,
+  "fields": {
+    "created_at": "2026-05-17T10:48:17.213Z",
+    "updated_at": "2026-05-17T10:48:17.213Z",
+    "actor": 4,
+    "action": "login",
+    "entity_type": "user",
+    "entity_id": "4",
+    "metadata": {
+      "role": "inspector"
+    },
+    "ip_address": "127.0.0.1"
+  }
+},
+{
+  "model": "accounts.auditlog",
+  "pk": 16,
+  "fields": {
+    "created_at": "2026-05-17T18:27:35.972Z",
+    "updated_at": "2026-05-17T18:27:35.972Z",
+    "actor": 4,
+    "action": "logout",
+    "entity_type": "user",
+    "entity_id": "4",
+    "metadata": {
+      "role": "inspector"
+    },
+    "ip_address": "127.0.0.1"
+  }
+},
+{
+  "model": "accounts.auditlog",
+  "pk": 17,
+  "fields": {
+    "created_at": "2026-05-17T18:32:17.545Z",
+    "updated_at": "2026-05-17T18:32:17.545Z",
+    "actor": 1,
+    "action": "login",
+    "entity_type": "user",
+    "entity_id": "1",
+    "metadata": {
+      "role": "admin"
+    },
+    "ip_address": "127.0.0.1"
+  }
+},
+{
+  "model": "accounts.auditlog",
+  "pk": 18,
+  "fields": {
+    "created_at": "2026-05-17T18:33:00.913Z",
+    "updated_at": "2026-05-17T18:33:00.913Z",
+    "actor": 1,
+    "action": "logout",
+    "entity_type": "user",
+    "entity_id": "1",
+    "metadata": {
+      "role": "admin"
+    },
+    "ip_address": "127.0.0.1"
+  }
+},
+{
+  "model": "accounts.auditlog",
+  "pk": 19,
+  "fields": {
+    "created_at": "2026-05-17T18:33:10.197Z",
+    "updated_at": "2026-05-17T18:33:10.197Z",
+    "actor": 6,
+    "action": "login",
+    "entity_type": "user",
+    "entity_id": "6",
+    "metadata": {
+      "role": "supervisor"
+    },
+    "ip_address": "127.0.0.1"
+  }
+},
+{
+  "model": "accounts.auditlog",
+  "pk": 20,
+  "fields": {
+    "created_at": "2026-05-17T18:33:41.128Z",
+    "updated_at": "2026-05-17T18:33:41.128Z",
+    "actor": 6,
+    "action": "logout",
+    "entity_type": "user",
+    "entity_id": "6",
+    "metadata": {
+      "role": "supervisor"
+    },
+    "ip_address": "127.0.0.1"
+  }
+},
+{
+  "model": "accounts.auditlog",
+  "pk": 21,
+  "fields": {
+    "created_at": "2026-05-17T18:33:50.809Z",
+    "updated_at": "2026-05-17T18:33:50.809Z",
+    "actor": 3,
+    "action": "login",
+    "entity_type": "user",
+    "entity_id": "3",
+    "metadata": {
+      "role": "operator"
+    },
+    "ip_address": "127.0.0.1"
+  }
+},
+{
+  "model": "accounts.auditlog",
+  "pk": 22,
+  "fields": {
+    "created_at": "2026-05-17T18:34:16.093Z",
+    "updated_at": "2026-05-17T18:34:16.093Z",
+    "actor": 3,
+    "action": "logout",
+    "entity_type": "user",
+    "entity_id": "3",
+    "metadata": {
+      "role": "operator"
+    },
+    "ip_address": "127.0.0.1"
+  }
+},
+{
+  "model": "accounts.auditlog",
+  "pk": 23,
+  "fields": {
+    "created_at": "2026-05-17T18:34:40.163Z",
+    "updated_at": "2026-05-17T18:34:40.163Z",
+    "actor": 2,
+    "action": "login",
+    "entity_type": "user",
+    "entity_id": "2",
+    "metadata": {
+      "role": "customer"
+    },
+    "ip_address": "127.0.0.1"
+  }
+},
+{
+  "model": "accounts.auditlog",
+  "pk": 24,
+  "fields": {
+    "created_at": "2026-05-17T19:05:19.716Z",
+    "updated_at": "2026-05-17T19:05:19.716Z",
+    "actor": 3,
+    "action": "login",
+    "entity_type": "user",
+    "entity_id": "3",
+    "metadata": {
+      "role": "operator"
+    },
+    "ip_address": "127.0.0.1"
+  }
+},
+{
+  "model": "accounts.auditlog",
+  "pk": 25,
+  "fields": {
+    "created_at": "2026-05-17T19:40:16.451Z",
+    "updated_at": "2026-05-17T19:40:16.451Z",
+    "actor": 1,
+    "action": "login",
+    "entity_type": "user",
+    "entity_id": "1",
+    "metadata": {
+      "role": "admin"
+    },
+    "ip_address": "127.0.0.1"
+  }
+},
+{
+  "model": "vehicles.vehicle",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-05-14T21:44:33.238Z",
+    "updated_at": "2026-05-14T21:44:33.238Z",
+    "is_active": true,
+    "owner": 5,
+    "plate": "ABC123",
+    "vehicle_type": "light",
+    "vehicle_class": "",
+    "service_category": "particular",
+    "brand": "Toyota",
+    "model_line": "Corolla",
+    "model_year": 2020,
+    "color": "Blanco",
+    "fuel_type": "gasoline",
+    "vin": "",
+    "engine_number": "",
+    "mileage": 0,
+    "num_axes": 2,
+    "num_passengers": null,
+    "displacement": null,
+    "registration_city": "",
+    "tinted_windows": false,
+    "armored": false,
+    "non_functional": false
+  }
+},
+{
+  "model": "vehicles.vehicle",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-05-17T18:14:01.403Z",
+    "updated_at": "2026-05-17T18:14:01.403Z",
+    "is_active": true,
+    "owner": 7,
+    "plate": "ABC932",
+    "vehicle_type": "light",
+    "vehicle_class": "",
+    "service_category": "particular",
+    "brand": "Toyota",
+    "model_line": "Corolla",
+    "model_year": 2026,
+    "color": "",
+    "fuel_type": "hybrid",
+    "vin": "",
+    "engine_number": "",
+    "mileage": 0,
+    "num_axes": 2,
+    "num_passengers": null,
+    "displacement": null,
+    "registration_city": "",
+    "tinted_windows": false,
+    "armored": false,
+    "non_functional": false
+  }
+},
+{
+  "model": "vehicles.vehicle",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-05-17T19:06:46.965Z",
+    "updated_at": "2026-05-17T19:06:46.965Z",
+    "is_active": true,
+    "owner": 8,
+    "plate": "ABC122",
+    "vehicle_type": "light",
+    "vehicle_class": "",
+    "service_category": "particular",
+    "brand": "Toyota",
+    "model_line": "Corolla",
+    "model_year": 2026,
+    "color": "",
+    "fuel_type": "gasoline",
+    "vin": "",
+    "engine_number": "",
+    "mileage": 0,
+    "num_axes": 2,
+    "num_passengers": null,
+    "displacement": null,
+    "registration_city": "Madrid",
+    "tinted_windows": false,
+    "armored": false,
+    "non_functional": false
+  }
+},
+{
+  "model": "vehicles.vehicle",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-05-17T19:43:35.443Z",
+    "updated_at": "2026-05-17T19:43:35.443Z",
+    "is_active": true,
+    "owner": 9,
+    "plate": "ABC022",
+    "vehicle_type": "light",
+    "vehicle_class": "",
+    "service_category": "particular",
+    "brand": "Hyundai",
+    "model_line": "SantaFe",
+    "model_year": 2029,
+    "color": "",
+    "fuel_type": "gasoline",
+    "vin": "",
+    "engine_number": "",
+    "mileage": 0,
+    "num_axes": 2,
+    "num_passengers": null,
+    "displacement": null,
+    "registration_city": "",
+    "tinted_windows": false,
+    "armored": false,
+    "non_functional": false
+  }
+},
+{
+  "model": "vehicles.vehicle",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-05-17T20:12:29.014Z",
+    "updated_at": "2026-05-17T20:12:29.014Z",
+    "is_active": true,
+    "owner": 10,
+    "plate": "QFE513",
+    "vehicle_type": "light",
+    "vehicle_class": "",
+    "service_category": "particular",
+    "brand": "Hyundai",
+    "model_line": "Santa FE",
+    "model_year": 2007,
+    "color": "Blanco",
+    "fuel_type": "gasoline",
+    "vin": "",
+    "engine_number": "",
+    "mileage": 0,
+    "num_axes": 2,
+    "num_passengers": null,
+    "displacement": null,
+    "registration_city": "Santa Marta",
+    "tinted_windows": false,
+    "armored": false,
+    "non_functional": false
+  }
+},
+{
+  "model": "scheduling.branch",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.401Z",
+    "updated_at": "2026-05-10T23:37:54.401Z",
+    "is_active": true,
+    "code": "RCH-01",
+    "name": "Checkar Riohacha",
+    "city": "Riohacha",
+    "address": "Calle 15 No. 12B-44",
+    "phone": "3183586103",
+    "opens_at": "07:00:00",
+    "closes_at": "18:00:00"
+  }
+},
+{
+  "model": "scheduling.servicetype",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.406Z",
+    "updated_at": "2026-05-10T23:37:54.406Z",
+    "is_active": true,
+    "code": "RTM",
+    "name": "Revisión Técnico Mecánica",
+    "description": "Inspección oficial obligatoria",
+    "vehicle_type": "light",
+    "duration_minutes": 45,
+    "requires_payment_in_advance": false
+  }
+},
+{
+  "model": "scheduling.servicetype",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.409Z",
+    "updated_at": "2026-05-10T23:37:54.409Z",
+    "is_active": true,
+    "code": "PRE",
+    "name": "Pre-técnica",
+    "description": "Inspección diagnóstica previa",
+    "vehicle_type": "light",
+    "duration_minutes": 30,
+    "requires_payment_in_advance": false
+  }
+},
+{
+  "model": "scheduling.servicetype",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.411Z",
+    "updated_at": "2026-05-10T23:37:54.411Z",
+    "is_active": true,
+    "code": "RTM-MOT",
+    "name": "RTM Motocicleta",
+    "description": "Revisión técnico mecánica para motos",
+    "vehicle_type": "motorcycle",
+    "duration_minutes": 30,
+    "requires_payment_in_advance": false
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.414Z",
+    "updated_at": "2026-05-10T23:37:54.414Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-11T07:00:00Z",
+    "end_time": "2026-05-11T07:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.418Z",
+    "updated_at": "2026-05-10T23:37:54.418Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-11T07:45:00Z",
+    "end_time": "2026-05-11T08:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.420Z",
+    "updated_at": "2026-05-10T23:37:54.420Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-11T08:30:00Z",
+    "end_time": "2026-05-11T09:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.423Z",
+    "updated_at": "2026-05-10T23:37:54.423Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-11T09:15:00Z",
+    "end_time": "2026-05-11T10:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.426Z",
+    "updated_at": "2026-05-10T23:37:54.426Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-11T10:00:00Z",
+    "end_time": "2026-05-11T10:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.429Z",
+    "updated_at": "2026-05-10T23:37:54.429Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-11T10:45:00Z",
+    "end_time": "2026-05-11T11:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 7,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.431Z",
+    "updated_at": "2026-05-10T23:37:54.431Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-11T11:30:00Z",
+    "end_time": "2026-05-11T12:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 8,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.432Z",
+    "updated_at": "2026-05-10T23:37:54.432Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-11T14:00:00Z",
+    "end_time": "2026-05-11T14:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 9,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.434Z",
+    "updated_at": "2026-05-10T23:37:54.434Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-11T14:45:00Z",
+    "end_time": "2026-05-11T15:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 10,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.435Z",
+    "updated_at": "2026-05-10T23:37:54.435Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-11T15:30:00Z",
+    "end_time": "2026-05-11T16:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 11,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.437Z",
+    "updated_at": "2026-05-10T23:37:54.437Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-11T16:15:00Z",
+    "end_time": "2026-05-11T17:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 12,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.439Z",
+    "updated_at": "2026-05-10T23:37:54.439Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-11T17:00:00Z",
+    "end_time": "2026-05-11T17:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 13,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.441Z",
+    "updated_at": "2026-05-10T23:37:54.441Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-11T07:00:00Z",
+    "end_time": "2026-05-11T07:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 14,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.443Z",
+    "updated_at": "2026-05-10T23:37:54.443Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-11T07:45:00Z",
+    "end_time": "2026-05-11T08:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 15,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.445Z",
+    "updated_at": "2026-05-10T23:37:54.445Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-11T08:30:00Z",
+    "end_time": "2026-05-11T09:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 16,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.446Z",
+    "updated_at": "2026-05-10T23:37:54.446Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-11T09:15:00Z",
+    "end_time": "2026-05-11T09:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 17,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.448Z",
+    "updated_at": "2026-05-10T23:37:54.448Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-11T10:00:00Z",
+    "end_time": "2026-05-11T10:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 18,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.450Z",
+    "updated_at": "2026-05-10T23:37:54.450Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-11T10:45:00Z",
+    "end_time": "2026-05-11T11:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 19,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.451Z",
+    "updated_at": "2026-05-10T23:37:54.451Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-11T11:30:00Z",
+    "end_time": "2026-05-11T12:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 20,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.453Z",
+    "updated_at": "2026-05-10T23:37:54.453Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-11T14:00:00Z",
+    "end_time": "2026-05-11T14:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 21,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.455Z",
+    "updated_at": "2026-05-10T23:37:54.455Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-11T14:45:00Z",
+    "end_time": "2026-05-11T15:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 22,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.456Z",
+    "updated_at": "2026-05-10T23:37:54.456Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-11T15:30:00Z",
+    "end_time": "2026-05-11T16:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 23,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.458Z",
+    "updated_at": "2026-05-10T23:37:54.458Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-11T16:15:00Z",
+    "end_time": "2026-05-11T16:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 24,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.460Z",
+    "updated_at": "2026-05-10T23:37:54.460Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-11T17:00:00Z",
+    "end_time": "2026-05-11T17:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 25,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.462Z",
+    "updated_at": "2026-05-10T23:37:54.462Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-11T07:00:00Z",
+    "end_time": "2026-05-11T07:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 26,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.463Z",
+    "updated_at": "2026-05-10T23:37:54.463Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-11T07:45:00Z",
+    "end_time": "2026-05-11T08:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 27,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.465Z",
+    "updated_at": "2026-05-10T23:37:54.465Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-11T08:30:00Z",
+    "end_time": "2026-05-11T09:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 28,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.466Z",
+    "updated_at": "2026-05-10T23:37:54.466Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-11T09:15:00Z",
+    "end_time": "2026-05-11T09:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 29,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.468Z",
+    "updated_at": "2026-05-10T23:37:54.468Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-11T10:00:00Z",
+    "end_time": "2026-05-11T10:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 30,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.469Z",
+    "updated_at": "2026-05-10T23:37:54.469Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-11T10:45:00Z",
+    "end_time": "2026-05-11T11:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 31,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.471Z",
+    "updated_at": "2026-05-10T23:37:54.471Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-11T11:30:00Z",
+    "end_time": "2026-05-11T12:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 32,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.472Z",
+    "updated_at": "2026-05-10T23:37:54.472Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-11T14:00:00Z",
+    "end_time": "2026-05-11T14:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 33,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.474Z",
+    "updated_at": "2026-05-10T23:37:54.474Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-11T14:45:00Z",
+    "end_time": "2026-05-11T15:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 34,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.477Z",
+    "updated_at": "2026-05-10T23:37:54.477Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-11T15:30:00Z",
+    "end_time": "2026-05-11T16:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 35,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.478Z",
+    "updated_at": "2026-05-10T23:37:54.478Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-11T16:15:00Z",
+    "end_time": "2026-05-11T16:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 36,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.480Z",
+    "updated_at": "2026-05-10T23:37:54.480Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-11T17:00:00Z",
+    "end_time": "2026-05-11T17:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 37,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.482Z",
+    "updated_at": "2026-05-10T23:37:54.482Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-12T07:00:00Z",
+    "end_time": "2026-05-12T07:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 38,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.484Z",
+    "updated_at": "2026-05-10T23:37:54.484Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-12T07:45:00Z",
+    "end_time": "2026-05-12T08:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 39,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.487Z",
+    "updated_at": "2026-05-10T23:37:54.487Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-12T08:30:00Z",
+    "end_time": "2026-05-12T09:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 40,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.489Z",
+    "updated_at": "2026-05-10T23:37:54.489Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-12T09:15:00Z",
+    "end_time": "2026-05-12T10:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 41,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.491Z",
+    "updated_at": "2026-05-10T23:37:54.491Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-12T10:00:00Z",
+    "end_time": "2026-05-12T10:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 42,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.494Z",
+    "updated_at": "2026-05-10T23:37:54.494Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-12T10:45:00Z",
+    "end_time": "2026-05-12T11:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 43,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.496Z",
+    "updated_at": "2026-05-10T23:37:54.496Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-12T11:30:00Z",
+    "end_time": "2026-05-12T12:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 44,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.498Z",
+    "updated_at": "2026-05-10T23:37:54.498Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-12T14:00:00Z",
+    "end_time": "2026-05-12T14:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 45,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.501Z",
+    "updated_at": "2026-05-10T23:37:54.501Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-12T14:45:00Z",
+    "end_time": "2026-05-12T15:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 46,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.503Z",
+    "updated_at": "2026-05-10T23:37:54.503Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-12T15:30:00Z",
+    "end_time": "2026-05-12T16:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 47,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.505Z",
+    "updated_at": "2026-05-10T23:37:54.505Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-12T16:15:00Z",
+    "end_time": "2026-05-12T17:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 48,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.507Z",
+    "updated_at": "2026-05-10T23:37:54.507Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-12T17:00:00Z",
+    "end_time": "2026-05-12T17:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 49,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.510Z",
+    "updated_at": "2026-05-10T23:37:54.510Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-12T07:00:00Z",
+    "end_time": "2026-05-12T07:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 50,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.513Z",
+    "updated_at": "2026-05-10T23:37:54.513Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-12T07:45:00Z",
+    "end_time": "2026-05-12T08:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 51,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.515Z",
+    "updated_at": "2026-05-10T23:37:54.515Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-12T08:30:00Z",
+    "end_time": "2026-05-12T09:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 52,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.517Z",
+    "updated_at": "2026-05-10T23:37:54.517Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-12T09:15:00Z",
+    "end_time": "2026-05-12T09:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 53,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.519Z",
+    "updated_at": "2026-05-10T23:37:54.519Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-12T10:00:00Z",
+    "end_time": "2026-05-12T10:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 54,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.522Z",
+    "updated_at": "2026-05-10T23:37:54.522Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-12T10:45:00Z",
+    "end_time": "2026-05-12T11:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 55,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.524Z",
+    "updated_at": "2026-05-10T23:37:54.524Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-12T11:30:00Z",
+    "end_time": "2026-05-12T12:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 56,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.527Z",
+    "updated_at": "2026-05-10T23:37:54.527Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-12T14:00:00Z",
+    "end_time": "2026-05-12T14:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 57,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.529Z",
+    "updated_at": "2026-05-10T23:37:54.529Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-12T14:45:00Z",
+    "end_time": "2026-05-12T15:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 58,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.531Z",
+    "updated_at": "2026-05-10T23:37:54.531Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-12T15:30:00Z",
+    "end_time": "2026-05-12T16:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 59,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.533Z",
+    "updated_at": "2026-05-10T23:37:54.533Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-12T16:15:00Z",
+    "end_time": "2026-05-12T16:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 60,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.535Z",
+    "updated_at": "2026-05-10T23:37:54.535Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-12T17:00:00Z",
+    "end_time": "2026-05-12T17:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 61,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.538Z",
+    "updated_at": "2026-05-10T23:37:54.538Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-12T07:00:00Z",
+    "end_time": "2026-05-12T07:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 62,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.540Z",
+    "updated_at": "2026-05-10T23:37:54.540Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-12T07:45:00Z",
+    "end_time": "2026-05-12T08:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 63,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.542Z",
+    "updated_at": "2026-05-10T23:37:54.542Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-12T08:30:00Z",
+    "end_time": "2026-05-12T09:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 64,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.544Z",
+    "updated_at": "2026-05-10T23:37:54.544Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-12T09:15:00Z",
+    "end_time": "2026-05-12T09:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 65,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.546Z",
+    "updated_at": "2026-05-10T23:37:54.547Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-12T10:00:00Z",
+    "end_time": "2026-05-12T10:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 66,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.550Z",
+    "updated_at": "2026-05-10T23:37:54.550Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-12T10:45:00Z",
+    "end_time": "2026-05-12T11:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 67,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.552Z",
+    "updated_at": "2026-05-10T23:37:54.552Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-12T11:30:00Z",
+    "end_time": "2026-05-12T12:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 68,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.555Z",
+    "updated_at": "2026-05-10T23:37:54.555Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-12T14:00:00Z",
+    "end_time": "2026-05-12T14:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 69,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.557Z",
+    "updated_at": "2026-05-10T23:37:54.557Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-12T14:45:00Z",
+    "end_time": "2026-05-12T15:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 70,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.560Z",
+    "updated_at": "2026-05-10T23:37:54.560Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-12T15:30:00Z",
+    "end_time": "2026-05-12T16:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 71,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.562Z",
+    "updated_at": "2026-05-10T23:37:54.562Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-12T16:15:00Z",
+    "end_time": "2026-05-12T16:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 72,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.565Z",
+    "updated_at": "2026-05-10T23:37:54.565Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-12T17:00:00Z",
+    "end_time": "2026-05-12T17:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 73,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.567Z",
+    "updated_at": "2026-05-10T23:37:54.567Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-13T07:00:00Z",
+    "end_time": "2026-05-13T07:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 74,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.569Z",
+    "updated_at": "2026-05-10T23:37:54.569Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-13T07:45:00Z",
+    "end_time": "2026-05-13T08:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 75,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.572Z",
+    "updated_at": "2026-05-10T23:37:54.572Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-13T08:30:00Z",
+    "end_time": "2026-05-13T09:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 76,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.574Z",
+    "updated_at": "2026-05-10T23:37:54.574Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-13T09:15:00Z",
+    "end_time": "2026-05-13T10:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 77,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.577Z",
+    "updated_at": "2026-05-10T23:37:54.577Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-13T10:00:00Z",
+    "end_time": "2026-05-13T10:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 78,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.579Z",
+    "updated_at": "2026-05-10T23:37:54.579Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-13T10:45:00Z",
+    "end_time": "2026-05-13T11:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 79,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.582Z",
+    "updated_at": "2026-05-10T23:37:54.582Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-13T11:30:00Z",
+    "end_time": "2026-05-13T12:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 80,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.584Z",
+    "updated_at": "2026-05-10T23:37:54.584Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-13T14:00:00Z",
+    "end_time": "2026-05-13T14:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 81,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.586Z",
+    "updated_at": "2026-05-10T23:37:54.586Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-13T14:45:00Z",
+    "end_time": "2026-05-13T15:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 82,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.588Z",
+    "updated_at": "2026-05-10T23:37:54.588Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-13T15:30:00Z",
+    "end_time": "2026-05-13T16:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 83,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.591Z",
+    "updated_at": "2026-05-10T23:37:54.591Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-13T16:15:00Z",
+    "end_time": "2026-05-13T17:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 84,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.593Z",
+    "updated_at": "2026-05-10T23:37:54.593Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-13T17:00:00Z",
+    "end_time": "2026-05-13T17:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 85,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.597Z",
+    "updated_at": "2026-05-10T23:37:54.597Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-13T07:00:00Z",
+    "end_time": "2026-05-13T07:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 86,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.598Z",
+    "updated_at": "2026-05-10T23:37:54.598Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-13T07:45:00Z",
+    "end_time": "2026-05-13T08:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 87,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.600Z",
+    "updated_at": "2026-05-10T23:37:54.600Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-13T08:30:00Z",
+    "end_time": "2026-05-13T09:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 88,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.601Z",
+    "updated_at": "2026-05-10T23:37:54.601Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-13T09:15:00Z",
+    "end_time": "2026-05-13T09:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 89,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.603Z",
+    "updated_at": "2026-05-10T23:37:54.603Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-13T10:00:00Z",
+    "end_time": "2026-05-13T10:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 90,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.605Z",
+    "updated_at": "2026-05-10T23:37:54.605Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-13T10:45:00Z",
+    "end_time": "2026-05-13T11:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 91,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.606Z",
+    "updated_at": "2026-05-10T23:37:54.606Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-13T11:30:00Z",
+    "end_time": "2026-05-13T12:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 92,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.608Z",
+    "updated_at": "2026-05-10T23:37:54.608Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-13T14:00:00Z",
+    "end_time": "2026-05-13T14:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 93,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.611Z",
+    "updated_at": "2026-05-10T23:37:54.611Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-13T14:45:00Z",
+    "end_time": "2026-05-13T15:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 94,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.612Z",
+    "updated_at": "2026-05-10T23:37:54.612Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-13T15:30:00Z",
+    "end_time": "2026-05-13T16:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 95,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.614Z",
+    "updated_at": "2026-05-10T23:37:54.614Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-13T16:15:00Z",
+    "end_time": "2026-05-13T16:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 96,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.616Z",
+    "updated_at": "2026-05-10T23:37:54.616Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-13T17:00:00Z",
+    "end_time": "2026-05-13T17:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 97,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.617Z",
+    "updated_at": "2026-05-10T23:37:54.617Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-13T07:00:00Z",
+    "end_time": "2026-05-13T07:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 98,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.619Z",
+    "updated_at": "2026-05-10T23:37:54.619Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-13T07:45:00Z",
+    "end_time": "2026-05-13T08:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 99,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.621Z",
+    "updated_at": "2026-05-10T23:37:54.621Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-13T08:30:00Z",
+    "end_time": "2026-05-13T09:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 100,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.622Z",
+    "updated_at": "2026-05-10T23:37:54.622Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-13T09:15:00Z",
+    "end_time": "2026-05-13T09:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 101,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.624Z",
+    "updated_at": "2026-05-10T23:37:54.624Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-13T10:00:00Z",
+    "end_time": "2026-05-13T10:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 102,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.626Z",
+    "updated_at": "2026-05-10T23:37:54.626Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-13T10:45:00Z",
+    "end_time": "2026-05-13T11:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 103,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.629Z",
+    "updated_at": "2026-05-10T23:37:54.629Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-13T11:30:00Z",
+    "end_time": "2026-05-13T12:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 104,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.632Z",
+    "updated_at": "2026-05-10T23:37:54.632Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-13T14:00:00Z",
+    "end_time": "2026-05-13T14:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 105,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.634Z",
+    "updated_at": "2026-05-10T23:37:54.634Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-13T14:45:00Z",
+    "end_time": "2026-05-13T15:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 106,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.636Z",
+    "updated_at": "2026-05-10T23:37:54.636Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-13T15:30:00Z",
+    "end_time": "2026-05-13T16:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 107,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.638Z",
+    "updated_at": "2026-05-10T23:37:54.638Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-13T16:15:00Z",
+    "end_time": "2026-05-13T16:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 108,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.641Z",
+    "updated_at": "2026-05-10T23:37:54.641Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-13T17:00:00Z",
+    "end_time": "2026-05-13T17:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 109,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.644Z",
+    "updated_at": "2026-05-10T23:37:54.644Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-14T07:00:00Z",
+    "end_time": "2026-05-14T07:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 110,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.646Z",
+    "updated_at": "2026-05-10T23:37:54.646Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-14T07:45:00Z",
+    "end_time": "2026-05-14T08:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 111,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.648Z",
+    "updated_at": "2026-05-10T23:37:54.648Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-14T08:30:00Z",
+    "end_time": "2026-05-14T09:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 112,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.650Z",
+    "updated_at": "2026-05-10T23:37:54.650Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-14T09:15:00Z",
+    "end_time": "2026-05-14T10:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 113,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.652Z",
+    "updated_at": "2026-05-10T23:37:54.652Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-14T10:00:00Z",
+    "end_time": "2026-05-14T10:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 114,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.655Z",
+    "updated_at": "2026-05-10T23:37:54.655Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-14T10:45:00Z",
+    "end_time": "2026-05-14T11:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 115,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.657Z",
+    "updated_at": "2026-05-10T23:37:54.657Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-14T11:30:00Z",
+    "end_time": "2026-05-14T12:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 116,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.660Z",
+    "updated_at": "2026-05-10T23:37:54.660Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-14T14:00:00Z",
+    "end_time": "2026-05-14T14:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 117,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.662Z",
+    "updated_at": "2026-05-10T23:37:54.662Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-14T14:45:00Z",
+    "end_time": "2026-05-14T15:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 118,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.664Z",
+    "updated_at": "2026-05-10T23:37:54.664Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-14T15:30:00Z",
+    "end_time": "2026-05-14T16:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 119,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.666Z",
+    "updated_at": "2026-05-10T23:37:54.666Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-14T16:15:00Z",
+    "end_time": "2026-05-14T17:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 120,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.669Z",
+    "updated_at": "2026-05-10T23:37:54.669Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-14T17:00:00Z",
+    "end_time": "2026-05-14T17:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 121,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.671Z",
+    "updated_at": "2026-05-10T23:37:54.671Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-14T07:00:00Z",
+    "end_time": "2026-05-14T07:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 122,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.673Z",
+    "updated_at": "2026-05-10T23:37:54.673Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-14T07:45:00Z",
+    "end_time": "2026-05-14T08:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 123,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.676Z",
+    "updated_at": "2026-05-10T23:37:54.676Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-14T08:30:00Z",
+    "end_time": "2026-05-14T09:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 124,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.678Z",
+    "updated_at": "2026-05-10T23:37:54.678Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-14T09:15:00Z",
+    "end_time": "2026-05-14T09:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 125,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.679Z",
+    "updated_at": "2026-05-10T23:37:54.679Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-14T10:00:00Z",
+    "end_time": "2026-05-14T10:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 126,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.681Z",
+    "updated_at": "2026-05-10T23:37:54.681Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-14T10:45:00Z",
+    "end_time": "2026-05-14T11:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 127,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.682Z",
+    "updated_at": "2026-05-10T23:37:54.682Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-14T11:30:00Z",
+    "end_time": "2026-05-14T12:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 128,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.684Z",
+    "updated_at": "2026-05-10T23:37:54.684Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-14T14:00:00Z",
+    "end_time": "2026-05-14T14:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 129,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.686Z",
+    "updated_at": "2026-05-10T23:37:54.686Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-14T14:45:00Z",
+    "end_time": "2026-05-14T15:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 130,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.687Z",
+    "updated_at": "2026-05-10T23:37:54.687Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-14T15:30:00Z",
+    "end_time": "2026-05-14T16:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 131,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.689Z",
+    "updated_at": "2026-05-10T23:37:54.689Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-14T16:15:00Z",
+    "end_time": "2026-05-14T16:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 132,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.692Z",
+    "updated_at": "2026-05-10T23:37:54.692Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-14T17:00:00Z",
+    "end_time": "2026-05-14T17:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 133,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.694Z",
+    "updated_at": "2026-05-10T23:37:54.694Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-14T07:00:00Z",
+    "end_time": "2026-05-14T07:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 134,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.696Z",
+    "updated_at": "2026-05-10T23:37:54.696Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-14T07:45:00Z",
+    "end_time": "2026-05-14T08:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 135,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.699Z",
+    "updated_at": "2026-05-10T23:37:54.699Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-14T08:30:00Z",
+    "end_time": "2026-05-14T09:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 136,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.701Z",
+    "updated_at": "2026-05-10T23:37:54.701Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-14T09:15:00Z",
+    "end_time": "2026-05-14T09:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 137,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.703Z",
+    "updated_at": "2026-05-10T23:37:54.703Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-14T10:00:00Z",
+    "end_time": "2026-05-14T10:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 138,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.706Z",
+    "updated_at": "2026-05-10T23:37:54.706Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-14T10:45:00Z",
+    "end_time": "2026-05-14T11:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 139,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.708Z",
+    "updated_at": "2026-05-10T23:37:54.708Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-14T11:30:00Z",
+    "end_time": "2026-05-14T12:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 140,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.711Z",
+    "updated_at": "2026-05-10T23:37:54.711Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-14T14:00:00Z",
+    "end_time": "2026-05-14T14:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 141,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.713Z",
+    "updated_at": "2026-05-10T23:37:54.713Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-14T14:45:00Z",
+    "end_time": "2026-05-14T15:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 142,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.715Z",
+    "updated_at": "2026-05-10T23:37:54.715Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-14T15:30:00Z",
+    "end_time": "2026-05-14T16:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 143,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.717Z",
+    "updated_at": "2026-05-10T23:37:54.717Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-14T16:15:00Z",
+    "end_time": "2026-05-14T16:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 144,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.719Z",
+    "updated_at": "2026-05-10T23:37:54.719Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-14T17:00:00Z",
+    "end_time": "2026-05-14T17:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 145,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.722Z",
+    "updated_at": "2026-05-10T23:37:54.722Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-15T07:00:00Z",
+    "end_time": "2026-05-15T07:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 146,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.724Z",
+    "updated_at": "2026-05-10T23:37:54.724Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-15T07:45:00Z",
+    "end_time": "2026-05-15T08:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 147,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.727Z",
+    "updated_at": "2026-05-10T23:37:54.727Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-15T08:30:00Z",
+    "end_time": "2026-05-15T09:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 148,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.729Z",
+    "updated_at": "2026-05-10T23:37:54.729Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-15T09:15:00Z",
+    "end_time": "2026-05-15T10:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 149,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.732Z",
+    "updated_at": "2026-05-10T23:37:54.732Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-15T10:00:00Z",
+    "end_time": "2026-05-15T10:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 150,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.734Z",
+    "updated_at": "2026-05-10T23:37:54.734Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-15T10:45:00Z",
+    "end_time": "2026-05-15T11:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 151,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.736Z",
+    "updated_at": "2026-05-10T23:37:54.736Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-15T11:30:00Z",
+    "end_time": "2026-05-15T12:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 152,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.738Z",
+    "updated_at": "2026-05-10T23:37:54.738Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-15T14:00:00Z",
+    "end_time": "2026-05-15T14:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 153,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.740Z",
+    "updated_at": "2026-05-10T23:37:54.740Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-15T14:45:00Z",
+    "end_time": "2026-05-15T15:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 154,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.743Z",
+    "updated_at": "2026-05-10T23:37:54.743Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-15T15:30:00Z",
+    "end_time": "2026-05-15T16:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 155,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.746Z",
+    "updated_at": "2026-05-10T23:37:54.746Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-15T16:15:00Z",
+    "end_time": "2026-05-15T17:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 156,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.748Z",
+    "updated_at": "2026-05-10T23:37:54.748Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-15T17:00:00Z",
+    "end_time": "2026-05-15T17:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 157,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.750Z",
+    "updated_at": "2026-05-10T23:37:54.750Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-15T07:00:00Z",
+    "end_time": "2026-05-15T07:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 158,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.752Z",
+    "updated_at": "2026-05-10T23:37:54.752Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-15T07:45:00Z",
+    "end_time": "2026-05-15T08:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 159,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.754Z",
+    "updated_at": "2026-05-10T23:37:54.754Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-15T08:30:00Z",
+    "end_time": "2026-05-15T09:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 160,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.757Z",
+    "updated_at": "2026-05-10T23:37:54.757Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-15T09:15:00Z",
+    "end_time": "2026-05-15T09:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 161,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.759Z",
+    "updated_at": "2026-05-10T23:37:54.759Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-15T10:00:00Z",
+    "end_time": "2026-05-15T10:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 162,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.761Z",
+    "updated_at": "2026-05-10T23:37:54.761Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-15T10:45:00Z",
+    "end_time": "2026-05-15T11:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 163,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.763Z",
+    "updated_at": "2026-05-10T23:37:54.763Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-15T11:30:00Z",
+    "end_time": "2026-05-15T12:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 164,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.765Z",
+    "updated_at": "2026-05-10T23:37:54.765Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-15T14:00:00Z",
+    "end_time": "2026-05-15T14:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 165,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.767Z",
+    "updated_at": "2026-05-10T23:37:54.767Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-15T14:45:00Z",
+    "end_time": "2026-05-15T15:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 166,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.769Z",
+    "updated_at": "2026-05-10T23:37:54.769Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-15T15:30:00Z",
+    "end_time": "2026-05-15T16:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 167,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.772Z",
+    "updated_at": "2026-05-10T23:37:54.772Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-15T16:15:00Z",
+    "end_time": "2026-05-15T16:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 168,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.774Z",
+    "updated_at": "2026-05-10T23:37:54.774Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-15T17:00:00Z",
+    "end_time": "2026-05-15T17:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 169,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.777Z",
+    "updated_at": "2026-05-10T23:37:54.777Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-15T07:00:00Z",
+    "end_time": "2026-05-15T07:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 170,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.779Z",
+    "updated_at": "2026-05-10T23:37:54.779Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-15T07:45:00Z",
+    "end_time": "2026-05-15T08:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 171,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.781Z",
+    "updated_at": "2026-05-10T23:37:54.781Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-15T08:30:00Z",
+    "end_time": "2026-05-15T09:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 172,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.783Z",
+    "updated_at": "2026-05-10T23:37:54.783Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-15T09:15:00Z",
+    "end_time": "2026-05-15T09:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 173,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.786Z",
+    "updated_at": "2026-05-10T23:37:54.786Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-15T10:00:00Z",
+    "end_time": "2026-05-15T10:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 174,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.788Z",
+    "updated_at": "2026-05-10T23:37:54.788Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-15T10:45:00Z",
+    "end_time": "2026-05-15T11:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 175,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.790Z",
+    "updated_at": "2026-05-10T23:37:54.790Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-15T11:30:00Z",
+    "end_time": "2026-05-15T12:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 176,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.794Z",
+    "updated_at": "2026-05-10T23:37:54.794Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-15T14:00:00Z",
+    "end_time": "2026-05-15T14:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 177,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.796Z",
+    "updated_at": "2026-05-10T23:37:54.796Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-15T14:45:00Z",
+    "end_time": "2026-05-15T15:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 178,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.797Z",
+    "updated_at": "2026-05-10T23:37:54.798Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-15T15:30:00Z",
+    "end_time": "2026-05-15T16:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 179,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.799Z",
+    "updated_at": "2026-05-10T23:37:54.799Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-15T16:15:00Z",
+    "end_time": "2026-05-15T16:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 180,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.802Z",
+    "updated_at": "2026-05-10T23:37:54.802Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-15T17:00:00Z",
+    "end_time": "2026-05-15T17:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 181,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.804Z",
+    "updated_at": "2026-05-10T23:37:54.804Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-16T07:00:00Z",
+    "end_time": "2026-05-16T07:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 182,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.806Z",
+    "updated_at": "2026-05-10T23:37:54.806Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-16T07:45:00Z",
+    "end_time": "2026-05-16T08:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 183,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.808Z",
+    "updated_at": "2026-05-10T23:37:54.808Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-16T08:30:00Z",
+    "end_time": "2026-05-16T09:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 184,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.810Z",
+    "updated_at": "2026-05-10T23:37:54.810Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-16T09:15:00Z",
+    "end_time": "2026-05-16T10:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 185,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.812Z",
+    "updated_at": "2026-05-10T23:37:54.812Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-16T10:00:00Z",
+    "end_time": "2026-05-16T10:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 186,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.814Z",
+    "updated_at": "2026-05-10T23:37:54.814Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-16T10:45:00Z",
+    "end_time": "2026-05-16T11:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 187,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.816Z",
+    "updated_at": "2026-05-10T23:37:54.816Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-16T11:30:00Z",
+    "end_time": "2026-05-16T12:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 188,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.819Z",
+    "updated_at": "2026-05-10T23:37:54.819Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-16T14:00:00Z",
+    "end_time": "2026-05-16T14:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 189,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.821Z",
+    "updated_at": "2026-05-10T23:37:54.821Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-16T14:45:00Z",
+    "end_time": "2026-05-16T15:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 190,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.822Z",
+    "updated_at": "2026-05-10T23:37:54.822Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-16T15:30:00Z",
+    "end_time": "2026-05-16T16:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 191,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.824Z",
+    "updated_at": "2026-05-10T23:37:54.824Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-16T16:15:00Z",
+    "end_time": "2026-05-16T17:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 192,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.827Z",
+    "updated_at": "2026-05-10T23:37:54.827Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-16T17:00:00Z",
+    "end_time": "2026-05-16T17:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 193,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.829Z",
+    "updated_at": "2026-05-10T23:37:54.829Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-16T07:00:00Z",
+    "end_time": "2026-05-16T07:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 194,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.832Z",
+    "updated_at": "2026-05-10T23:37:54.832Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-16T07:45:00Z",
+    "end_time": "2026-05-16T08:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 195,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.834Z",
+    "updated_at": "2026-05-10T23:37:54.834Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-16T08:30:00Z",
+    "end_time": "2026-05-16T09:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 196,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.836Z",
+    "updated_at": "2026-05-10T23:37:54.836Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-16T09:15:00Z",
+    "end_time": "2026-05-16T09:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 197,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.838Z",
+    "updated_at": "2026-05-10T23:37:54.838Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-16T10:00:00Z",
+    "end_time": "2026-05-16T10:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 198,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.840Z",
+    "updated_at": "2026-05-10T23:37:54.840Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-16T10:45:00Z",
+    "end_time": "2026-05-16T11:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 199,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.843Z",
+    "updated_at": "2026-05-10T23:37:54.843Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-16T11:30:00Z",
+    "end_time": "2026-05-16T12:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 200,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.845Z",
+    "updated_at": "2026-05-10T23:37:54.845Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-16T14:00:00Z",
+    "end_time": "2026-05-16T14:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 201,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.847Z",
+    "updated_at": "2026-05-10T23:37:54.847Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-16T14:45:00Z",
+    "end_time": "2026-05-16T15:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 202,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.850Z",
+    "updated_at": "2026-05-10T23:37:54.850Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-16T15:30:00Z",
+    "end_time": "2026-05-16T16:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 203,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.853Z",
+    "updated_at": "2026-05-10T23:37:54.853Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-16T16:15:00Z",
+    "end_time": "2026-05-16T16:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 204,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.855Z",
+    "updated_at": "2026-05-10T23:37:54.855Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-16T17:00:00Z",
+    "end_time": "2026-05-16T17:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 205,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.857Z",
+    "updated_at": "2026-05-10T23:37:54.857Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-16T07:00:00Z",
+    "end_time": "2026-05-16T07:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 206,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.860Z",
+    "updated_at": "2026-05-10T23:37:54.860Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-16T07:45:00Z",
+    "end_time": "2026-05-16T08:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 207,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.862Z",
+    "updated_at": "2026-05-10T23:37:54.862Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-16T08:30:00Z",
+    "end_time": "2026-05-16T09:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 208,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.864Z",
+    "updated_at": "2026-05-10T23:37:54.864Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-16T09:15:00Z",
+    "end_time": "2026-05-16T09:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 209,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.867Z",
+    "updated_at": "2026-05-10T23:37:54.867Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-16T10:00:00Z",
+    "end_time": "2026-05-16T10:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 210,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.869Z",
+    "updated_at": "2026-05-10T23:37:54.869Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-16T10:45:00Z",
+    "end_time": "2026-05-16T11:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 211,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.872Z",
+    "updated_at": "2026-05-10T23:37:54.872Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-16T11:30:00Z",
+    "end_time": "2026-05-16T12:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 212,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.874Z",
+    "updated_at": "2026-05-10T23:37:54.874Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-16T14:00:00Z",
+    "end_time": "2026-05-16T14:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 213,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.877Z",
+    "updated_at": "2026-05-10T23:37:54.877Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-16T14:45:00Z",
+    "end_time": "2026-05-16T15:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 214,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.879Z",
+    "updated_at": "2026-05-10T23:37:54.879Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-16T15:30:00Z",
+    "end_time": "2026-05-16T16:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 215,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.883Z",
+    "updated_at": "2026-05-10T23:37:54.883Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-16T16:15:00Z",
+    "end_time": "2026-05-16T16:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 216,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.886Z",
+    "updated_at": "2026-05-10T23:37:54.886Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-16T17:00:00Z",
+    "end_time": "2026-05-16T17:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 217,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.888Z",
+    "updated_at": "2026-05-10T23:37:54.888Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-17T07:00:00Z",
+    "end_time": "2026-05-17T07:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 218,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.890Z",
+    "updated_at": "2026-05-10T23:37:54.890Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-17T07:45:00Z",
+    "end_time": "2026-05-17T08:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 219,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.893Z",
+    "updated_at": "2026-05-10T23:37:54.893Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-17T08:30:00Z",
+    "end_time": "2026-05-17T09:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 220,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.895Z",
+    "updated_at": "2026-05-10T23:37:54.895Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-17T09:15:00Z",
+    "end_time": "2026-05-17T10:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 221,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.897Z",
+    "updated_at": "2026-05-10T23:37:54.897Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-17T10:00:00Z",
+    "end_time": "2026-05-17T10:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 222,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.899Z",
+    "updated_at": "2026-05-10T23:37:54.899Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-17T10:45:00Z",
+    "end_time": "2026-05-17T11:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 223,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.901Z",
+    "updated_at": "2026-05-10T23:37:54.901Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-17T11:30:00Z",
+    "end_time": "2026-05-17T12:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 224,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.903Z",
+    "updated_at": "2026-05-10T23:37:54.903Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-17T14:00:00Z",
+    "end_time": "2026-05-17T14:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 225,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.905Z",
+    "updated_at": "2026-05-10T23:37:54.905Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-17T14:45:00Z",
+    "end_time": "2026-05-17T15:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 226,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.908Z",
+    "updated_at": "2026-05-10T23:37:54.908Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-17T15:30:00Z",
+    "end_time": "2026-05-17T16:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 227,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.910Z",
+    "updated_at": "2026-05-10T23:37:54.910Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-17T16:15:00Z",
+    "end_time": "2026-05-17T17:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 228,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.913Z",
+    "updated_at": "2026-05-10T23:37:54.913Z",
+    "branch": 1,
+    "service": 1,
+    "start_time": "2026-05-17T17:00:00Z",
+    "end_time": "2026-05-17T17:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 229,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.915Z",
+    "updated_at": "2026-05-10T23:37:54.915Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-17T07:00:00Z",
+    "end_time": "2026-05-17T07:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 230,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.917Z",
+    "updated_at": "2026-05-10T23:37:54.917Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-17T07:45:00Z",
+    "end_time": "2026-05-17T08:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 231,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.919Z",
+    "updated_at": "2026-05-10T23:37:54.919Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-17T08:30:00Z",
+    "end_time": "2026-05-17T09:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 232,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.921Z",
+    "updated_at": "2026-05-10T23:37:54.921Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-17T09:15:00Z",
+    "end_time": "2026-05-17T09:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 233,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.923Z",
+    "updated_at": "2026-05-10T23:37:54.923Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-17T10:00:00Z",
+    "end_time": "2026-05-17T10:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 234,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.926Z",
+    "updated_at": "2026-05-10T23:37:54.926Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-17T10:45:00Z",
+    "end_time": "2026-05-17T11:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 235,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.928Z",
+    "updated_at": "2026-05-10T23:37:54.928Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-17T11:30:00Z",
+    "end_time": "2026-05-17T12:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 236,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.931Z",
+    "updated_at": "2026-05-10T23:37:54.931Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-17T14:00:00Z",
+    "end_time": "2026-05-17T14:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 237,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.933Z",
+    "updated_at": "2026-05-10T23:37:54.933Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-17T14:45:00Z",
+    "end_time": "2026-05-17T15:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 238,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.936Z",
+    "updated_at": "2026-05-10T23:37:54.936Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-17T15:30:00Z",
+    "end_time": "2026-05-17T16:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 239,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.938Z",
+    "updated_at": "2026-05-10T23:37:54.938Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-17T16:15:00Z",
+    "end_time": "2026-05-17T16:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 240,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.941Z",
+    "updated_at": "2026-05-10T23:37:54.941Z",
+    "branch": 1,
+    "service": 2,
+    "start_time": "2026-05-17T17:00:00Z",
+    "end_time": "2026-05-17T17:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 241,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.944Z",
+    "updated_at": "2026-05-10T23:37:54.944Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-17T07:00:00Z",
+    "end_time": "2026-05-17T07:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 242,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.946Z",
+    "updated_at": "2026-05-10T23:37:54.946Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-17T07:45:00Z",
+    "end_time": "2026-05-17T08:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 243,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.949Z",
+    "updated_at": "2026-05-10T23:37:54.949Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-17T08:30:00Z",
+    "end_time": "2026-05-17T09:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 244,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.951Z",
+    "updated_at": "2026-05-10T23:37:54.951Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-17T09:15:00Z",
+    "end_time": "2026-05-17T09:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 245,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.953Z",
+    "updated_at": "2026-05-10T23:37:54.953Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-17T10:00:00Z",
+    "end_time": "2026-05-17T10:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 246,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.955Z",
+    "updated_at": "2026-05-10T23:37:54.955Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-17T10:45:00Z",
+    "end_time": "2026-05-17T11:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 247,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.957Z",
+    "updated_at": "2026-05-10T23:37:54.957Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-17T11:30:00Z",
+    "end_time": "2026-05-17T12:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 248,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.959Z",
+    "updated_at": "2026-05-10T23:37:54.959Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-17T14:00:00Z",
+    "end_time": "2026-05-17T14:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 249,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.962Z",
+    "updated_at": "2026-05-10T23:37:54.962Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-17T14:45:00Z",
+    "end_time": "2026-05-17T15:15:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 250,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.964Z",
+    "updated_at": "2026-05-10T23:37:54.964Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-17T15:30:00Z",
+    "end_time": "2026-05-17T16:00:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 251,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.966Z",
+    "updated_at": "2026-05-10T23:37:54.966Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-17T16:15:00Z",
+    "end_time": "2026-05-17T16:45:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.scheduleslot",
+  "pk": 252,
+  "fields": {
+    "created_at": "2026-05-10T23:37:54.968Z",
+    "updated_at": "2026-05-10T23:37:54.968Z",
+    "branch": 1,
+    "service": 3,
+    "start_time": "2026-05-17T17:00:00Z",
+    "end_time": "2026-05-17T17:30:00Z",
+    "capacity": 3,
+    "reserved_count": 0,
+    "is_available": true
+  }
+},
+{
+  "model": "scheduling.appointment",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-05-17T18:14:01.416Z",
+    "updated_at": "2026-05-17T18:14:01.416Z",
+    "customer": 7,
+    "vehicle": 2,
+    "branch": 1,
+    "service": 1,
+    "slot": null,
+    "scheduled_for": "2026-05-17T18:14:01.415Z",
+    "status": "checked_in",
+    "payment_status": "pending",
+    "notes": "",
+    "source_channel": "walk_in"
+  }
+},
+{
+  "model": "scheduling.appointment",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-05-17T19:06:46.970Z",
+    "updated_at": "2026-05-17T19:06:46.970Z",
+    "customer": 8,
+    "vehicle": 3,
+    "branch": 1,
+    "service": 1,
+    "slot": null,
+    "scheduled_for": "2026-05-17T19:06:46.970Z",
+    "status": "checked_in",
+    "payment_status": "pending",
+    "notes": "",
+    "source_channel": "walk_in"
+  }
+},
+{
+  "model": "scheduling.appointment",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-05-17T19:43:35.450Z",
+    "updated_at": "2026-05-17T19:43:35.450Z",
+    "customer": 9,
+    "vehicle": 4,
+    "branch": 1,
+    "service": 1,
+    "slot": null,
+    "scheduled_for": "2026-05-17T19:43:35.449Z",
+    "status": "checked_in",
+    "payment_status": "pending",
+    "notes": "",
+    "source_channel": "walk_in"
+  }
+},
+{
+  "model": "scheduling.appointment",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-05-17T20:12:29.026Z",
+    "updated_at": "2026-05-17T20:12:29.026Z",
+    "customer": 10,
+    "vehicle": 5,
+    "branch": 1,
+    "service": 1,
+    "slot": null,
+    "scheduled_for": "2026-05-17T20:12:29.026Z",
+    "status": "checked_in",
+    "payment_status": "pending",
+    "notes": "",
+    "source_channel": "walk_in"
+  }
+}
+]

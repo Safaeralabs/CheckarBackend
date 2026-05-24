@@ -15,6 +15,16 @@ DEBUG = os.getenv("DJANGO_DEBUG", "False").lower() == "true"
 ALLOWED_HOSTS = [host.strip() for host in os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")]
 CORS_ALLOWED_ORIGINS = [origin.strip() for origin in os.getenv("CORS_ALLOWED_ORIGINS", "").split(",") if origin.strip()]
 
+# Railway sirve todo vía HTTPS — le decimos a Django que confíe en el proxy
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+
+# Construye CSRF_TRUSTED_ORIGINS automáticamente a partir de ALLOWED_HOSTS
+CSRF_TRUSTED_ORIGINS = [
+    f"https://{host}"
+    for host in ALLOWED_HOSTS
+    if host not in ("127.0.0.1", "localhost", "")
+]
+
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
