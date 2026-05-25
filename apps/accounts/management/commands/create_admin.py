@@ -15,6 +15,11 @@ class Command(BaseCommand):
         parser.add_argument("--first-name", default="Administrador", dest="first_name")
 
     def handle(self, *args, **options):
+        # Si ya existe cualquier usuario admin activo, no hace nada
+        if User.objects.filter(role=RoleChoices.ADMIN, is_active=True).exists():
+            self.stdout.write("Admin ya existe — sin cambios.")
+            return
+
         username   = options["username"]
         email      = options["email"]
         password   = options["password"] or secrets.token_urlsafe(12)
@@ -33,7 +38,6 @@ class Command(BaseCommand):
         )
 
         if not created:
-            # Si ya existía, solo resetea la contraseña y lo reactiva
             user.role = RoleChoices.ADMIN
             user.is_active = True
             user.must_change_password = True
@@ -42,11 +46,10 @@ class Command(BaseCommand):
         user.set_password(password)
         user.save(update_fields=["password"])
 
-        action = "Creado" if created else "Reseteado"
         self.stdout.write(self.style.SUCCESS(
-            f"{action} admin:\n"
+            f"[CHECKAR] Admin creado:\n"
             f"  Usuario:    {username}\n"
             f"  Contraseña: {password}\n"
             f"  Email:      {email}\n"
-            f"  (deberá cambiar la contraseña en el primer login)"
+            f"  Cambia la contraseña en el primer login."
         ))
