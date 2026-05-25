@@ -105,6 +105,27 @@ class OperatorProfileSerializer(serializers.ModelSerializer):
         ]
 
 
+class UpdateProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ["first_name", "last_name", "email", "phone", "document_number"]
+
+    def validate_email(self, value):
+        if User.objects.filter(email=value).exclude(pk=self.instance.pk).exists():
+            raise serializers.ValidationError("Este correo ya está registrado.")
+        return value
+
+
+class ChangePasswordSerializer(serializers.Serializer):
+    current_password = serializers.CharField(write_only=True)
+    new_password = serializers.CharField(write_only=True, min_length=8)
+
+    def validate_current_password(self, value):
+        if not self.context["request"].user.check_password(value):
+            raise serializers.ValidationError("Contraseña actual incorrecta.")
+        return value
+
+
 class AuditLogSerializer(serializers.ModelSerializer):
     class Meta:
         model = AuditLog

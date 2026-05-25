@@ -9,11 +9,13 @@ from .models import AuditLog, CustomerProfile, OperatorProfile, User
 from .permissions import IsAdminUserRole
 from .serializers import (
     AuditLogSerializer,
+    ChangePasswordSerializer,
     CustomerProfileSerializer,
     LoginSerializer,
     OperatorProfileSerializer,
     PublicClientRegistrationSerializer,
     RegisterSerializer,
+    UpdateProfileSerializer,
     UserSerializer,
 )
 
@@ -99,9 +101,24 @@ class UserViewSet(viewsets.ReadOnlyModelViewSet):
             return queryset
         return queryset.filter(id=self.request.user.id)
 
-    @action(detail=False, methods=["get"])
+    @action(detail=False, methods=["get", "patch"])
     def me(self, request):
-        return Response(self.get_serializer(request.user).data)
+        if request.method == "GET":
+            return Response(self.get_serializer(request.user).data)
+        serializer = UpdateProfileSerializer(request.user, data=request.data, partial=True)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(UserSerializer(request.user).data)
+
+    @action(detail=False, methods=["post"], url_path="me/change-password")
+    def change_password(self, request):
+        serializer = ChangePasswordSerializer(data=request.data, context={"request": request})
+        serializer.is_valid(raise_exception=True)
+        request.user.set_password(serializer.validated_data["new_password"])
+        request.user.save()
+        Token.objects.filter(user=request.user).delete()
+        token = Token.objects.create(user=request.user)
+        return Response({"token": token.key})
 
 
 class CustomerProfileViewSet(viewsets.ModelViewSet):
