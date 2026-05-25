@@ -20,8 +20,8 @@ ALLOWED_HOSTS = (
     + [h for h in _extra_hosts if h]
 )
 
-CORS_ALLOWED_ORIGINS = [origin.strip() for origin in os.getenv("CORS_ALLOWED_ORIGINS", "").split(",") if origin.strip()]
-# Durante el primer deploy en Railway el frontend aún no existe; permite todo temporalmente
+_cors_env = [origin.strip() for origin in os.getenv("CORS_ALLOWED_ORIGINS", "").split(",") if origin.strip()]
+CORS_ALLOWED_ORIGINS = _cors_env if _cors_env else ["https://checkfrontendv1.vercel.app"]
 CORS_ALLOW_ALL_ORIGINS = os.getenv("CORS_ALLOW_ALL_ORIGINS", "False").lower() == "true"
 
 # Railway sirve todo vía HTTPS — le decimos a Django que confíe en el proxy
