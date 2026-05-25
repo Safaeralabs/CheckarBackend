@@ -22,7 +22,7 @@ class Command(BaseCommand):
 
         username   = options["username"]
         email      = options["email"]
-        password   = options["password"] or secrets.token_urlsafe(12)
+        password   = options["password"] or "Checkar2025!"
         first_name = options["first_name"]
 
         user, created = User.objects.get_or_create(
