@@ -44,19 +44,6 @@ def _validate_phone(value: str, exclude_pk=None) -> str:
     return value
 
 
-def _validate_document_unique(value: str, exclude_pk=None) -> str:
-    if not value:
-        return value
-    qs = User.objects.filter(document_number=value)
-    if exclude_pk:
-        qs = qs.exclude(pk=exclude_pk)
-    if qs.exists():
-        raise serializers.ValidationError(
-            "Ya existe un usuario registrado con este número de documento."
-        )
-    return value
-
-
 # ── Serializers ───────────────────────────────────────────────────────────────
 
 class UserSerializer(serializers.ModelSerializer):
@@ -118,9 +105,6 @@ class RegisterSerializer(serializers.ModelSerializer):
 
     def validate_phone(self, value):
         return _validate_phone(value)
-
-    def validate_document_number(self, value):
-        return _validate_document_unique(value)
 
     def create(self, validated_data):
         profile_data = validated_data.pop("customer_profile", {})
@@ -189,9 +173,6 @@ class CreateInternalUserSerializer(serializers.ModelSerializer):
     def validate_phone(self, value):
         return _validate_phone(value)
 
-    def validate_document_number(self, value):
-        return _validate_document_unique(value)
-
     def create(self, validated_data):
         password = validated_data.pop("password")
         user = User.objects.create_user(password=password, must_change_password=True, **validated_data)
@@ -216,10 +197,6 @@ class UpdateInternalUserSerializer(serializers.ModelSerializer):
         pk = self.instance.pk if self.instance else None
         return _validate_phone(value, exclude_pk=pk)
 
-    def validate_document_number(self, value):
-        pk = self.instance.pk if self.instance else None
-        return _validate_document_unique(value, exclude_pk=pk)
-
 
 class UpdateProfileSerializer(serializers.ModelSerializer):
     class Meta:
@@ -233,10 +210,6 @@ class UpdateProfileSerializer(serializers.ModelSerializer):
     def validate_phone(self, value):
         pk = self.instance.pk if self.instance else None
         return _validate_phone(value, exclude_pk=pk)
-
-    def validate_document_number(self, value):
-        pk = self.instance.pk if self.instance else None
-        return _validate_document_unique(value, exclude_pk=pk)
 
 
 class ChangePasswordSerializer(serializers.Serializer):
@@ -288,9 +261,6 @@ class PublicClientRegistrationSerializer(serializers.Serializer):
 
     def validate_phone(self, value):
         return _validate_phone(value)
-
-    def validate_document_number(self, value):
-        return _validate_document_unique(value)
 
     @transaction.atomic
     def create(self, validated_data):
