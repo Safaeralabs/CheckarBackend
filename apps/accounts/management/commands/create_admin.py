@@ -15,41 +15,40 @@ class Command(BaseCommand):
         parser.add_argument("--first-name", default="Administrador", dest="first_name")
 
     def handle(self, *args, **options):
-        # Si ya existe cualquier usuario admin activo, no hace nada
+        # Si ya hay un admin activo, no toca nada
         if User.objects.filter(role=RoleChoices.ADMIN, is_active=True).exists():
-            self.stdout.write("Admin ya existe — sin cambios.")
+            self.stdout.write("Admin activo ya existe — sin cambios.")
             return
 
         username   = options["username"]
         email      = options["email"]
-        password   = options["password"] or "Checkar2025!"
+        password   = options["password"] or "checkar123"
         first_name = options["first_name"]
 
-        user, created = User.objects.get_or_create(
-            username=username,
-            defaults={
-                "email": email,
-                "first_name": first_name,
-                "last_name": "",
-                "role": RoleChoices.ADMIN,
-                "is_active": True,
-                "must_change_password": True,
-            },
-        )
+        # Puede existir inactivo (borrado desde el panel)
+        user = User.objects.filter(role=RoleChoices.ADMIN).first() \
+            or User.objects.filter(username=username).first()
 
-        if not created:
+        if user:
             user.role = RoleChoices.ADMIN
             user.is_active = True
-            user.must_change_password = True
-            user.save(update_fields=["role", "is_active", "must_change_password"])
-
-        user.set_password(password)
-        user.save(update_fields=["password"])
-
-        self.stdout.write(self.style.SUCCESS(
-            f"[CHECKAR] Admin creado:\n"
-            f"  Usuario:    {username}\n"
-            f"  Contraseña: {password}\n"
-            f"  Email:      {email}\n"
-            f"  Cambia la contraseña en el primer login."
-        ))
+            user.must_change_password = False
+            user.set_password(password)
+            user.save()
+            self.stdout.write(self.style.SUCCESS(
+                f"[CHECKAR] Admin reactivado:\n"
+                f"  Usuario:    {user.username}\n"
+                f"  Contraseña: {password}"
+            ))
+        else:
+            user = User.objects.create_user(
+                username=username, email=email, first_name=first_name,
+                last_name="", role=RoleChoices.ADMIN,
+                is_active=True, must_change_password=False,
+                password=password,
+            )
+            self.stdout.write(self.style.SUCCESS(
+                f"[CHECKAR] Admin creado:\n"
+                f"  Usuario:    {username}\n"
+                f"  Contraseña: {password}"
+            ))
