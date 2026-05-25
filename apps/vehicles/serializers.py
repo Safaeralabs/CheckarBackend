@@ -5,6 +5,20 @@ from .validators import validate_plate_format
 
 
 class VehicleSerializer(serializers.ModelSerializer):
+    owner_detail = serializers.SerializerMethodField(read_only=True)
+
+    def get_owner_detail(self, obj):
+        o = obj.owner
+        if not o: return None
+        return {
+            "id": o.id,
+            "first_name": o.first_name,
+            "last_name": o.last_name,
+            "email": o.email,
+            "phone": o.phone,
+            "document_number": o.document_number,
+        }
+
     class Meta:
         model = Vehicle
         fields = "__all__"

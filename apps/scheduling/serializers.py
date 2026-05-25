@@ -55,7 +55,7 @@ class AppointmentSerializer(serializers.ModelSerializer):
         c = obj.customer
         if not c: return None
         return {"id": c.id, "first_name": c.first_name, "last_name": c.last_name,
-                "document_number": c.document_number, "phone": c.phone}
+                "document_number": c.document_number, "phone": c.phone, "email": c.email}
 
     def get_inspection_record(self, obj):
         try:
