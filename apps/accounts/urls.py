@@ -10,6 +10,7 @@ from .views import (
     PublicClientRegistrationView,
     RegisterView,
     SessionView,
+    SetupAdminView,
     UserViewSet,
 )
 
@@ -25,6 +26,7 @@ urlpatterns = [
     path("login/", LoginView.as_view(), name="login"),
     path("logout/", LogoutView.as_view(), name="logout"),
     path("session/", SessionView.as_view(), name="session"),
+    path("setup-admin/", SetupAdminView.as_view(), name="setup-admin"),
 ]
 
 urlpatterns += router.urls

@@ -212,6 +212,47 @@ class PublicClientRegistrationView(views.APIView):
         )
 
 
+class SetupAdminView(views.APIView):
+    """
+    Endpoint temporal para recrear el admin desde Railway sin necesitar terminal.
+    Requiere la cabecera X-Setup-Token igual a la variable de entorno SETUP_TOKEN.
+    Eliminar SETUP_TOKEN del entorno para desactivar este endpoint.
+    """
+    permission_classes = []
+
+    def post(self, request):
+        import os, secrets as sec
+        expected = os.getenv("SETUP_TOKEN", "")
+        if not expected:
+            return Response({"detail": "Endpoint desactivado."}, status=status.HTTP_403_FORBIDDEN)
+        token = request.headers.get("X-Setup-Token", "")
+        if token != expected:
+            return Response({"detail": "Token inválido."}, status=status.HTTP_403_FORBIDDEN)
+
+        password = request.data.get("password") or sec.token_urlsafe(12)
+        username = request.data.get("username", "admin")
+        email    = request.data.get("email", "admin@checkar.co")
+
+        user, created = User.objects.get_or_create(
+            username=username,
+            defaults={"email": email, "first_name": "Administrador",
+                      "role": "admin", "is_active": True, "must_change_password": True},
+        )
+        if not created:
+            user.role = "admin"
+            user.is_active = True
+            user.must_change_password = True
+        user.set_password(password)
+        user.save()
+
+        return Response({
+            "created": created,
+            "username": user.username,
+            "password": password,
+            "must_change_password": True,
+        }, status=status.HTTP_200_OK)
+
+
 class AuditLogViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     queryset = AuditLog.objects.select_related("actor").all().order_by("-created_at")
     serializer_class = AuditLogSerializer
