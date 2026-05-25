@@ -112,6 +112,15 @@ class UserViewSet(viewsets.ModelViewSet):
             return UpdateInternalUserSerializer
         return UserSerializer
 
+    def destroy(self, request, *args, **kwargs):
+        user = self.get_object()
+        if user.pk == request.user.pk:
+            return Response(
+                {"detail": "No puedes eliminar tu propia cuenta."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+        return super().destroy(request, *args, **kwargs)
+
     def perform_create(self, serializer):
         import secrets
         from apps.common.emails import send_internal_user_credentials_email
