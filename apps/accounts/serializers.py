@@ -105,6 +105,37 @@ class OperatorProfileSerializer(serializers.ModelSerializer):
         ]
 
 
+_INTERNAL_ROLES = ["operator", "inspector", "supervisor", "admin"]
+
+
+class CreateInternalUserSerializer(serializers.ModelSerializer):
+    password = serializers.CharField(write_only=True, min_length=8)
+
+    class Meta:
+        model = User
+        fields = ["username", "password", "first_name", "last_name", "email", "phone", "document_number", "role"]
+
+    def validate_role(self, value):
+        if value not in _INTERNAL_ROLES:
+            raise serializers.ValidationError("Rol no permitido para usuarios internos.")
+        return value
+
+    def create(self, validated_data):
+        password = validated_data.pop("password")
+        return User.objects.create_user(password=password, **validated_data)
+
+
+class UpdateInternalUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ["first_name", "last_name", "email", "phone", "document_number", "role", "is_active"]
+
+    def validate_role(self, value):
+        if value not in _INTERNAL_ROLES:
+            raise serializers.ValidationError("Rol no permitido para usuarios internos.")
+        return value
+
+
 class UpdateProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
