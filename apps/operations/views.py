@@ -151,7 +151,8 @@ class WalkInView(views.APIView):
             # ── 2a. Crear cliente y vehículo ────────────────────────────
             is_new_client = True
             doc = data.get("document_number", "").strip()
-            email = data.get("email", "").strip()
+            email = data.get("email", "").strip().lower()
+            phone = data.get("phone", "").strip()
             if not doc:
                 return Response(
                     {"detail": "El número de documento es requerido para registrar un cliente nuevo."},
@@ -162,6 +163,20 @@ class WalkInView(views.APIView):
                     {"detail": "El email es requerido para registrar un cliente nuevo y enviarle sus credenciales de acceso."},
                     status=status.HTTP_400_BAD_REQUEST,
                 )
+
+            # Unicidad: solo verificar si el documento no existe aún
+            # (si ya existe, get_or_create reutiliza al usuario existente)
+            if not User.objects.filter(document_number=doc).exists():
+                if User.objects.filter(email__iexact=email).exists():
+                    return Response(
+                        {"detail": "Este correo electrónico ya está registrado en el sistema."},
+                        status=status.HTTP_400_BAD_REQUEST,
+                    )
+                if phone and User.objects.filter(phone=phone).exists():
+                    return Response(
+                        {"detail": "Este número de teléfono ya está registrado en el sistema."},
+                        status=status.HTTP_400_BAD_REQUEST,
+                    )
 
             owner, created = User.objects.get_or_create(
                 document_number=doc,

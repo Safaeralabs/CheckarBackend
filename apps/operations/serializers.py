@@ -20,6 +20,10 @@ class WalkInSerializer(serializers.Serializer):
     plate           = serializers.CharField(max_length=10)
     inspection_type = serializers.ChoiceField(choices=["official", "pre_technical"], default="official")
 
+    def validate_plate(self, value):
+        from apps.vehicles.validators import validate_plate_format
+        return validate_plate_format(value)
+
     # Solo si la placa NO existe en el sistema
     first_name      = serializers.CharField(max_length=150, required=False, allow_blank=True, default="")
     last_name       = serializers.CharField(max_length=150, required=False, allow_blank=True, default="")

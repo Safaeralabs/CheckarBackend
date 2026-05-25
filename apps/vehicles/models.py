@@ -32,6 +32,8 @@ class ServiceCategoryChoices(models.TextChoices):
     PARTICULAR = "particular", "Particular"
     COMMERCIAL = "commercial", "Comercial"
     PUBLIC = "public", "Publico"
+    OFFICIAL = "official", "Oficial"
+    TEACHING = "teaching", "Enseñanza"
 
 
 class Vehicle(SoftDeleteModel):

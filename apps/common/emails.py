@@ -39,6 +39,38 @@ Si tienes alguna duda, comunícate con nosotros en el CDA.
     )
 
 
+def send_internal_user_credentials_email(user, temp_password: str):
+    """
+    Envía credenciales temporales a un usuario interno recién creado por el admin.
+    """
+    if not user.email:
+        return
+
+    name = f"{user.first_name} {user.last_name}".strip() or user.username
+    subject = "Tu acceso a Checkar CDA — Credenciales temporales"
+    message = f"""Hola {name},
+
+El administrador de Checkar CDA ha creado tu cuenta con el siguiente rol: {user.role}.
+
+Tus credenciales de acceso temporales son:
+  Portal:     {FRONTEND_URL}/login
+  Usuario:    {user.username}
+  Contraseña: {temp_password}
+
+Al ingresar por primera vez, el sistema te pedirá que cambies tu contraseña.
+
+— Equipo Checkar CDA
+  Calle 15 No. 12B–44 · Riohacha, La Guajira
+"""
+    send_mail(
+        subject=subject,
+        message=message,
+        from_email=settings.DEFAULT_FROM_EMAIL,
+        recipient_list=[user.email],
+        fail_silently=True,
+    )
+
+
 def send_signature_request_email(user, reception):
     """
     Notifica al cliente que el operador solicitó su firma para la recepción del vehículo.

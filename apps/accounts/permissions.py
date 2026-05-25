@@ -17,7 +17,7 @@ class IsOperatorOrAbove(HasRole):
 
 
 class IsInspectorOrAbove(HasRole):
-    allowed_roles = ("inspector", "supervisor", "admin")
+    allowed_roles = ("operator", "inspector", "supervisor", "admin")
 
 
 class IsSupervisorOrAbove(HasRole):

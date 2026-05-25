@@ -18,6 +18,7 @@ class User(AbstractUser):
     document_number = models.CharField(max_length=32, blank=True)
     email_verified = models.BooleanField(default=False)
     mobile_notifications_enabled = models.BooleanField(default=True)
+    must_change_password = models.BooleanField(default=False)
 
 
 class CustomerProfile(TimeStampedModel):

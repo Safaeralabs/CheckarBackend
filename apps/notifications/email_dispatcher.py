@@ -34,7 +34,7 @@ def _html_body(title: str, message: str, recipient_name: str) -> str:
         <!-- CTA -->
         <tr>
           <td style="padding:0 32px 32px;">
-            <a href="http://localhost:5173/cliente"
+            <a href="{settings.FRONTEND_URL}/cliente"
                style="display:inline-block;background:#003049;color:#ffffff;text-decoration:none;
                       padding:12px 24px;border-radius:8px;font-size:14px;font-weight:600;">
               Ver mis revisiones

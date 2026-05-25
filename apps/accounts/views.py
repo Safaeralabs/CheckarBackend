@@ -96,11 +96,13 @@ class UserViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     filterset_fields = ["role", "is_active"]
     search_fields = ["username", "first_name", "last_name", "email", "document_number"]
-    http_method_names = ["get", "post", "patch", "head", "options"]
+    http_method_names = ["get", "post", "patch", "delete", "head", "options"]
 
     def get_permissions(self):
         if self.action in ("create", "partial_update", "reset_password"):
             return [IsSupervisorOrAbove()]
+        if self.action == "destroy":
+            return [IsAdminUserRole()]
         return [IsAuthenticated()]
 
     def get_serializer_class(self):
@@ -109,6 +111,13 @@ class UserViewSet(viewsets.ModelViewSet):
         if self.action == "partial_update":
             return UpdateInternalUserSerializer
         return UserSerializer
+
+    def perform_create(self, serializer):
+        import secrets
+        from apps.common.emails import send_internal_user_credentials_email
+        temp_password = secrets.token_urlsafe(10)
+        user = serializer.save(password=temp_password)
+        send_internal_user_credentials_email(user, temp_password)
 
     def get_queryset(self):
         queryset = User.objects.all().order_by("id")
@@ -132,6 +141,7 @@ class UserViewSet(viewsets.ModelViewSet):
         serializer = ChangePasswordSerializer(data=request.data, context={"request": request})
         serializer.is_valid(raise_exception=True)
         request.user.set_password(serializer.validated_data["new_password"])
+        request.user.must_change_password = False
         request.user.save()
         Token.objects.filter(user=request.user).delete()
         token = Token.objects.create(user=request.user)

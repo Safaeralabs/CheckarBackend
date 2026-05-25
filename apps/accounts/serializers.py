@@ -1,9 +1,63 @@
+import re
+
 from django.contrib.auth import authenticate
 from django.db import transaction
 from rest_framework import serializers
 
 from .models import AuditLog, CustomerProfile, OperatorProfile, RoleChoices, User
 
+
+# ── Shared validators (reutilizados en todos los serializers) ─────────────────
+
+_PHONE_RE = re.compile(r"^[+\d][\d\s\-(). ]*$")
+
+
+def _validate_email_unique(value: str, exclude_pk=None) -> str:
+    if not value:
+        return value
+    qs = User.objects.filter(email__iexact=value)
+    if exclude_pk:
+        qs = qs.exclude(pk=exclude_pk)
+    if qs.exists():
+        raise serializers.ValidationError("Este correo electrónico ya está registrado.")
+    return value.lower()
+
+
+def _validate_phone(value: str, exclude_pk=None) -> str:
+    value = value.strip()
+    if not value:
+        return value
+    if not _PHONE_RE.match(value):
+        raise serializers.ValidationError(
+            "Teléfono inválido. Use solo dígitos, espacios, guiones o el prefijo +."
+        )
+    digits = re.sub(r"[^\d]", "", value.lstrip("+"))
+    if not (7 <= len(digits) <= 15):
+        raise serializers.ValidationError(
+            "El número de teléfono debe tener entre 7 y 15 dígitos."
+        )
+    qs = User.objects.filter(phone=value)
+    if exclude_pk:
+        qs = qs.exclude(pk=exclude_pk)
+    if qs.exists():
+        raise serializers.ValidationError("Este número de teléfono ya está registrado.")
+    return value
+
+
+def _validate_document_unique(value: str, exclude_pk=None) -> str:
+    if not value:
+        return value
+    qs = User.objects.filter(document_number=value)
+    if exclude_pk:
+        qs = qs.exclude(pk=exclude_pk)
+    if qs.exists():
+        raise serializers.ValidationError(
+            "Ya existe un usuario registrado con este número de documento."
+        )
+    return value
+
+
+# ── Serializers ───────────────────────────────────────────────────────────────
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -19,6 +73,7 @@ class UserSerializer(serializers.ModelSerializer):
             "document_number",
             "email_verified",
             "mobile_notifications_enabled",
+            "must_change_password",
         ]
 
 
@@ -57,6 +112,15 @@ class RegisterSerializer(serializers.ModelSerializer):
         if value != RoleChoices.CUSTOMER:
             raise serializers.ValidationError("Solo se permite auto registro para clientes.")
         return value
+
+    def validate_email(self, value):
+        return _validate_email_unique(value)
+
+    def validate_phone(self, value):
+        return _validate_phone(value)
+
+    def validate_document_number(self, value):
+        return _validate_document_unique(value)
 
     def create(self, validated_data):
         profile_data = validated_data.pop("customer_profile", {})
@@ -105,24 +169,33 @@ class OperatorProfileSerializer(serializers.ModelSerializer):
         ]
 
 
-_INTERNAL_ROLES = ["operator", "inspector", "supervisor", "admin"]
+_INTERNAL_ROLES = ["operator", "supervisor", "admin"]
 
 
 class CreateInternalUserSerializer(serializers.ModelSerializer):
-    password = serializers.CharField(write_only=True, min_length=8)
-
     class Meta:
         model = User
-        fields = ["username", "password", "first_name", "last_name", "email", "phone", "document_number", "role"]
+        fields = ["username", "first_name", "last_name", "email", "phone", "document_number", "role"]
 
     def validate_role(self, value):
-        if value not in _INTERNAL_ROLES:
+        # Permite "inspector" solo para usuarios existentes (backward compat)
+        if value not in [*_INTERNAL_ROLES, "inspector"]:
             raise serializers.ValidationError("Rol no permitido para usuarios internos.")
         return value
 
+    def validate_email(self, value):
+        return _validate_email_unique(value)
+
+    def validate_phone(self, value):
+        return _validate_phone(value)
+
+    def validate_document_number(self, value):
+        return _validate_document_unique(value)
+
     def create(self, validated_data):
         password = validated_data.pop("password")
-        return User.objects.create_user(password=password, **validated_data)
+        user = User.objects.create_user(password=password, must_change_password=True, **validated_data)
+        return user
 
 
 class UpdateInternalUserSerializer(serializers.ModelSerializer):
@@ -135,6 +208,18 @@ class UpdateInternalUserSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("Rol no permitido para usuarios internos.")
         return value
 
+    def validate_email(self, value):
+        pk = self.instance.pk if self.instance else None
+        return _validate_email_unique(value, exclude_pk=pk)
+
+    def validate_phone(self, value):
+        pk = self.instance.pk if self.instance else None
+        return _validate_phone(value, exclude_pk=pk)
+
+    def validate_document_number(self, value):
+        pk = self.instance.pk if self.instance else None
+        return _validate_document_unique(value, exclude_pk=pk)
+
 
 class UpdateProfileSerializer(serializers.ModelSerializer):
     class Meta:
@@ -142,9 +227,16 @@ class UpdateProfileSerializer(serializers.ModelSerializer):
         fields = ["first_name", "last_name", "email", "phone", "document_number"]
 
     def validate_email(self, value):
-        if User.objects.filter(email=value).exclude(pk=self.instance.pk).exists():
-            raise serializers.ValidationError("Este correo ya está registrado.")
-        return value
+        pk = self.instance.pk if self.instance else None
+        return _validate_email_unique(value, exclude_pk=pk)
+
+    def validate_phone(self, value):
+        pk = self.instance.pk if self.instance else None
+        return _validate_phone(value, exclude_pk=pk)
+
+    def validate_document_number(self, value):
+        pk = self.instance.pk if self.instance else None
+        return _validate_document_unique(value, exclude_pk=pk)
 
 
 class ChangePasswordSerializer(serializers.Serializer):
@@ -175,7 +267,8 @@ class VehicleForRegistrationSerializer(serializers.Serializer):
 
     def validate_plate(self, value):
         from apps.vehicles.models import Vehicle
-        value = value.upper()
+        from apps.vehicles.validators import validate_plate_format
+        value = validate_plate_format(value)
         if Vehicle.objects.filter(plate=value).exists():
             raise serializers.ValidationError("Esta placa ya está registrada en el sistema.")
         return value
@@ -190,15 +283,14 @@ class PublicClientRegistrationSerializer(serializers.Serializer):
     password = serializers.CharField(min_length=8, write_only=True)
     vehicle = VehicleForRegistrationSerializer()
 
-    def validate_document_number(self, value):
-        if User.objects.filter(document_number=value).exists():
-            raise serializers.ValidationError("Ya existe una cuenta con este número de documento.")
-        return value
-
     def validate_email(self, value):
-        if User.objects.filter(email=value).exists():
-            raise serializers.ValidationError("Este correo ya está registrado.")
-        return value
+        return _validate_email_unique(value)
+
+    def validate_phone(self, value):
+        return _validate_phone(value)
+
+    def validate_document_number(self, value):
+        return _validate_document_unique(value)
 
     @transaction.atomic
     def create(self, validated_data):

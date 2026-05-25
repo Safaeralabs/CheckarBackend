@@ -18,7 +18,8 @@ def _default_inventory():
     return {
         "llavero": "", "equipo_carretera": "", "encendedor": "",
         "radio": "", "extintor": "", "tapete": "",
-        "herramientas": "", "parlantes": "", "num_sillas": "", "otros": "",
+        "herramientas": "", "parlantes": "", "num_sillas": "",
+        "lavado": "", "otros": "",
     }
 
 
