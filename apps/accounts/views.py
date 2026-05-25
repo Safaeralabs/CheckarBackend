@@ -99,7 +99,7 @@ class UserViewSet(viewsets.ModelViewSet):
     http_method_names = ["get", "post", "patch", "delete", "head", "options"]
 
     def get_permissions(self):
-        if self.action in ("create", "partial_update", "reset_password"):
+        if self.action in ("create", "partial_update", "reset_password", "resend_credentials"):
             return [IsSupervisorOrAbove()]
         if self.action == "destroy":
             return [IsAdminUserRole()]
@@ -155,6 +155,27 @@ class UserViewSet(viewsets.ModelViewSet):
         Token.objects.filter(user=request.user).delete()
         token = Token.objects.create(user=request.user)
         return Response({"token": token.key})
+
+    @action(detail=True, methods=["post"], url_path="resend-credentials")
+    def resend_credentials(self, request, pk=None):
+        import secrets as sec
+        from apps.common.emails import send_internal_user_credentials_email
+        user = self.get_object()
+        new_password = sec.token_urlsafe(10)
+        user.set_password(new_password)
+        user.must_change_password = True
+        user.save()
+        email_sent = False
+        try:
+            send_internal_user_credentials_email(user, new_password)
+            email_sent = True
+        except Exception:
+            pass
+        return Response({
+            "password": new_password,
+            "email_sent": email_sent,
+            "username": user.username,
+        })
 
     @action(detail=True, methods=["post"], url_path="reset-password")
     def reset_password(self, request, pk=None):

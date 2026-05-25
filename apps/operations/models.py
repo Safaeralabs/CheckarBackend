@@ -112,6 +112,15 @@ class VehicleReception(TimeStampedModel):
     client_signed_at = models.DateTimeField(null=True, blank=True)
 
 
+class DamagePhoto(TimeStampedModel):
+    reception = models.ForeignKey(
+        VehicleReception, on_delete=models.CASCADE, related_name="damage_photos"
+    )
+    damage_id = models.CharField(max_length=32)  # coincide con annotation id (Date.now())
+    photo_base64 = models.TextField()
+    label = models.CharField(max_length=120, blank=True)
+
+
 class SystemLogEntry(TimeStampedModel):
     level = models.CharField(max_length=20, choices=[("info", "Info"), ("warning", "Warning"), ("error", "Error")])
     source = models.CharField(max_length=80)

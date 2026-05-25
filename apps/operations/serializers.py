@@ -1,9 +1,17 @@
 from rest_framework import serializers
 
-from .models import SystemLogEntry, VehicleReception
+from .models import DamagePhoto, SystemLogEntry, VehicleReception
+
+
+class DamagePhotoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = DamagePhoto
+        fields = ["id", "damage_id", "photo_base64", "label", "created_at"]
 
 
 class VehicleReceptionSerializer(serializers.ModelSerializer):
+    damage_photos = DamagePhotoSerializer(many=True, read_only=True)
+
     class Meta:
         model = VehicleReception
         fields = "__all__"

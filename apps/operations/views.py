@@ -7,8 +7,8 @@ from rest_framework.response import Response
 
 from apps.accounts.permissions import IsOperatorOrAbove, IsSupervisorOrAbove
 
-from .models import SignatureStatusChoices, SystemLogEntry, VehicleReception
-from .serializers import SystemLogEntrySerializer, VehicleReceptionSerializer, WalkInSerializer
+from .models import DamagePhoto, SignatureStatusChoices, SystemLogEntry, VehicleReception
+from .serializers import DamagePhotoSerializer, SystemLogEntrySerializer, VehicleReceptionSerializer, WalkInSerializer
 
 
 class VehicleReceptionViewSet(viewsets.ModelViewSet):
@@ -101,6 +101,32 @@ class VehicleReceptionViewSet(viewsets.ModelViewSet):
         rec.save(update_fields=["signature_client", "signature_status", "client_signed_at"])
 
         return Response({"signature_status": rec.signature_status})
+
+    @action(detail=True, methods=["post"], url_path="damage_photos")
+    def add_damage_photo(self, request, pk=None):
+        rec = self.get_object()
+        damage_id = str(request.data.get("damage_id", "")).strip()
+        photo_base64 = request.data.get("photo_base64", "").strip()
+        label = request.data.get("label", "")
+        if not damage_id or not photo_base64:
+            return Response(
+                {"detail": "damage_id y photo_base64 son requeridos."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+        photo = DamagePhoto.objects.create(
+            reception=rec, damage_id=damage_id, photo_base64=photo_base64, label=label
+        )
+        return Response(DamagePhotoSerializer(photo).data, status=status.HTTP_201_CREATED)
+
+    @action(detail=True, methods=["delete"], url_path=r"damage_photos/(?P<photo_id>[0-9]+)")
+    def remove_damage_photo(self, request, pk=None, photo_id=None):
+        rec = self.get_object()
+        try:
+            photo = rec.damage_photos.get(id=photo_id)
+        except DamagePhoto.DoesNotExist:
+            return Response({"detail": "No encontrado."}, status=status.HTTP_404_NOT_FOUND)
+        photo.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 
 class SystemLogEntryViewSet(viewsets.ReadOnlyModelViewSet):
