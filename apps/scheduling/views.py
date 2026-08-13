@@ -65,7 +65,7 @@ class AppointmentViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         user = self.request.user
-        queryset = Appointment.objects.select_related("customer", "vehicle", "branch", "service", "slot")
+        queryset = Appointment.objects.select_related("customer", "vehicle", "branch", "service", "slot", "reception")
         if user.role == "customer":
             return queryset.filter(customer=user).order_by("-scheduled_for")
         return queryset.order_by("-scheduled_for")
