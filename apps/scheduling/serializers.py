@@ -50,6 +50,7 @@ class AppointmentSerializer(serializers.ModelSerializer):
 
     customer_detail       = serializers.SerializerMethodField(read_only=True)
     inspection_record     = serializers.SerializerMethodField(read_only=True)
+    turn_number           = serializers.SerializerMethodField(read_only=True)
 
     def get_customer_detail(self, obj):
         c = obj.customer
@@ -60,6 +61,12 @@ class AppointmentSerializer(serializers.ModelSerializer):
     def get_inspection_record(self, obj):
         try:
             return obj.inspection_record.id
+        except Exception:
+            return None
+
+    def get_turn_number(self, obj):
+        try:
+            return obj.reception.turn_number
         except Exception:
             return None
 
