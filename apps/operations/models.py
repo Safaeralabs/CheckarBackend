@@ -1,4 +1,6 @@
 from django.db import models
+from django.db.models import Max
+from django.utils import timezone
 
 from apps.common.models import TimeStampedModel
 
@@ -49,10 +51,38 @@ class SignatureStatusChoices(models.TextChoices):
 
 
 class VehicleReception(TimeStampedModel):
+    # Prefijo fijo del número de turno (ej. "A-001"). El consecutivo
+    # (queue_position) reinicia cada día por sede.
+    TURN_PREFIX = "A"
+
     appointment = models.OneToOneField("scheduling.Appointment", on_delete=models.CASCADE, related_name="reception")
     received_by = models.ForeignKey("accounts.User", on_delete=models.SET_NULL, null=True, blank=True)
     arrival_time = models.DateTimeField()
     queue_position = models.PositiveIntegerField(default=0)
+
+    @property
+    def turn_number(self):
+        if not self.queue_position:
+            return ""
+        return f"{self.TURN_PREFIX}-{self.queue_position:03d}"
+
+    @classmethod
+    def assign_queue_position(cls, branch, when):
+        """
+        Calcula el siguiente número de turno del día para `branch`, de forma
+        atómica. Debe invocarse dentro de una transacción: bloquea la fila
+        de la sede para serializar la asignación entre solicitudes concurrentes,
+        y luego toma el máximo `queue_position` ya asignado ese día en esa sede.
+        """
+        from apps.scheduling.models import Branch
+
+        Branch.objects.select_for_update().get(pk=branch.pk)
+        day = timezone.localtime(when).date()
+        last = cls.objects.filter(
+            appointment__branch=branch,
+            arrival_time__date=day,
+        ).aggregate(Max("queue_position"))["queue_position__max"] or 0
+        return last + 1
 
     # Tipo de inspección
     inspection_type = models.CharField(

@@ -11,10 +11,12 @@ class DamagePhotoSerializer(serializers.ModelSerializer):
 
 class VehicleReceptionSerializer(serializers.ModelSerializer):
     damage_photos = DamagePhotoSerializer(many=True, read_only=True)
+    turn_number = serializers.ReadOnlyField()
 
     class Meta:
         model = VehicleReception
         fields = "__all__"
+        read_only_fields = ["queue_position"]
 
 
 class SystemLogEntrySerializer(serializers.ModelSerializer):

@@ -33,6 +33,13 @@ class VehicleReceptionViewSet(viewsets.ModelViewSet):
             return [IsAuthenticated()]
         return [IsOperatorOrAbove()]
 
+    @transaction.atomic
+    def perform_create(self, serializer):
+        appointment = serializer.validated_data["appointment"]
+        arrival_time = serializer.validated_data["arrival_time"]
+        queue_position = VehicleReception.assign_queue_position(appointment.branch, arrival_time)
+        serializer.save(queue_position=queue_position)
+
     @action(detail=True, methods=["post"], url_path="request_signature")
     def request_signature(self, request, pk=None):
         """
@@ -276,10 +283,12 @@ class WalkInView(views.APIView):
         )
 
         # ── 6. Crear recepción ───────────────────────────────────────────
-        VehicleReception.objects.create(
+        queue_position = VehicleReception.assign_queue_position(branch, now)
+        reception = VehicleReception.objects.create(
             appointment=appointment,
             received_by=request.user,
             arrival_time=now,
+            queue_position=queue_position,
             inspection_type=data["inspection_type"],
             driver_is_owner=True,
             plate_confirmed=True,
@@ -300,6 +309,8 @@ class WalkInView(views.APIView):
                 "is_new_client": is_new_client,
                 "owner_name": f"{owner.first_name} {owner.last_name}".strip(),
                 "owner_email": owner.email,
+                "reception_id": reception.id,
+                "turn_number": reception.turn_number,
             },
             status=status.HTTP_201_CREATED,
         )
