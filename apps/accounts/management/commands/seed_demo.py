@@ -45,6 +45,17 @@ USERS = [
         "email": "cliente@checkar.co",
         "role": "customer",
     },
+    {
+        "username": "andres",
+        "password": "checkar123",
+        "first_name": "Andres",
+        "last_name": "",
+        "email": "Andres@gmail.com",
+        "phone": "+16093920333",
+        "role": "admin",
+        "is_staff": True,
+        "is_superuser": True,
+    },
 ]
 
 BRANCH = {
@@ -76,6 +87,7 @@ class Command(BaseCommand):
                 first_name=data.get("first_name", ""),
                 last_name=data.get("last_name", ""),
                 email=data.get("email", ""),
+                phone=data.get("phone", ""),
                 role=data["role"],
                 is_staff=data.get("is_staff", False),
                 is_superuser=data.get("is_superuser", False),
