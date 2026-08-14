@@ -141,6 +141,13 @@ class VehicleReception(TimeStampedModel):
     signature_requested_at = models.DateTimeField(null=True, blank=True)
     client_signed_at = models.DateTimeField(null=True, blank=True)
 
+    # Entrega del vehículo (firma "recibí conforme" del cliente, FR-25)
+    signature_delivery = models.TextField(blank=True)
+    delivered_at = models.DateTimeField(null=True, blank=True)
+    delivered_by = models.ForeignKey(
+        "accounts.User", on_delete=models.SET_NULL, null=True, blank=True, related_name="+"
+    )
+
 
 class DamagePhoto(TimeStampedModel):
     reception = models.ForeignKey(
