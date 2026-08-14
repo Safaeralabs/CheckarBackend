@@ -48,6 +48,14 @@ STATUS_TIMESTAMP_FIELDS = {
     "results_recorded": "results_recorded_at",
 }
 
+# Sincroniza el estado de la cita (Appointment) cuando la inspección avanza
+APPOINTMENT_STATUS_BY_INSPECTION_STATUS = {
+    "documents_validated": "in_progress",
+    "approved": "completed",
+    "certified": "completed",
+    "rejected": "rejected",
+}
+
 
 class InspectionRecordViewSet(viewsets.ModelViewSet):
     serializer_class = InspectionRecordSerializer
@@ -116,6 +124,13 @@ class InspectionRecordViewSet(viewsets.ModelViewSet):
             update_fields.append("completed_at")
 
         inspection.save(update_fields=update_fields)
+
+        # Mantener sincronizado el estado de la cita con el avance de la inspección
+        appointment_status = APPOINTMENT_STATUS_BY_INSPECTION_STATUS.get(next_status)
+        if appointment_status:
+            inspection.appointment.status = appointment_status
+            inspection.appointment.save(update_fields=["status", "updated_at"])
+
         return Response({"status": inspection.status})
 
 
